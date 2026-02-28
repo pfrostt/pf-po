@@ -50,7 +50,8 @@
       scale: startScale,
       xPercent: -50,
       yPercent: -50,
-      transformOrigin: 'center center'
+      transformOrigin: 'center center',
+      visibility: 'visible'
     });
 
     var revealTl = gsap.timeline({
