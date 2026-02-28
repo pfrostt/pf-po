@@ -39,52 +39,6 @@
       lenis.raf(time * 1000);
     });
     gsap.ticker.lagSmoothing(0);
-
-    /* ---------- Mountain reveal animation ---------- */
-    var isMobile = window.innerWidth <= 767;
-    var startScale = isMobile ? 3 : 5;
-    var pinDistance = isMobile ? '+=150%' : '+=200%';
-
-    // Set initial transform via GSAP (controls translate + scale together)
-    gsap.set('.mountain-reveal__svg', {
-      scale: startScale,
-      xPercent: -50,
-      yPercent: -50,
-      transformOrigin: 'center center',
-      visibility: 'visible'
-    });
-
-    var revealTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.mountain-reveal',
-        pin: true,
-        scrub: 1,
-        start: 'top top',
-        end: pinDistance,
-        invalidateOnRefresh: true
-      }
-    });
-
-    // Phase 1 (0% – 80%): SVG shrinks + fades, bg transitions
-    revealTl.to('.mountain-reveal__svg', {
-      scale: 1,
-      opacity: 0,
-      duration: 0.8,
-      ease: 'none'
-    }, 0);
-
-    revealTl.to('.mountain-reveal__bg', {
-      backgroundColor: '#F5F4ED',
-      duration: 0.8,
-      ease: 'none'
-    }, 0);
-
-    // Phase 2 (80% – 100%): brand fades in
-    revealTl.to('.mountain-reveal__brand', {
-      opacity: 1,
-      duration: 0.2,
-      ease: 'none'
-    }, 0.8);
   }
 
   /* ---------- Snap scroll (desktop/tablet only) ---------- */
