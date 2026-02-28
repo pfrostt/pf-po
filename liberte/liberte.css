@@ -414,4 +414,18 @@ img {
     width: 320px;
     margin: 1.5rem auto 0;
   }
+
+  /* --- Mountain reveal mobile --- */
+  .mountain-reveal__gold {
+    width: 85%;
+  }
+
+  .mountain-reveal__logo {
+    width: 180px;
+  }
+
+  .mountain-reveal__tagline {
+    font-size: 11px;
+    margin-top: 1rem;
+  }
 }
