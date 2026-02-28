@@ -241,12 +241,102 @@ img {
   color: var(--color-dark-section);
 }
 
+/* --- Dark Content Sections --- */
+.section-dark {
+  background-color: var(--color-dark-section);
+  color: var(--color-light);
+  padding: 80px var(--container-padding) 100px;
+  position: relative;
+}
+
+.section-dark__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 80px;
+  padding: 0 40px;
+}
+
+.section-dark__number {
+  font-family: 'ivypresto-headline', 'IvyPresto Headline', var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--color-light);
+}
+
+.section-dark__headline {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-light);
+}
+
+.section-dark__content {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-dark__toggle {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--color-light);
+}
+
+.section-dark__toggle .text-muted {
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
+.section-dark__body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--color-light);
+  text-align: justify;
+}
+
+.section-dark__description {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--color-light);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-dark__images {
+  margin: 0 auto 60px;
+  max-width: 480px;
+}
+
+.section-dark__img {
+  width: 100%;
+  height: auto;
+}
+
+.section-dark__side-text {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--color-light);
+  max-width: 320px;
+  text-align: left;
+}
+
 /* --- Mountain Reveal (Pinned) --- */
 .mountain-reveal {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  margin-top: -1px;
 }
 
 .mountain-reveal__bg {
