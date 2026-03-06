@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Early mouse/pointer tracker — must be before all other scripts -->
+  <script>
+    window.__mouseX = 0;
+    window.__mouseY = 0;
+    window.__mouseActive = false;
+    function __onPointer(e) {
+      window.__mouseActive = true;
+      window.__mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+      window.__mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+    }
+    document.addEventListener('mousemove', __onPointer, true);
+    document.addEventListener('pointermove', __onPointer, true);
+  </script>
+
+  <title>Application — Too Good To Go | Paul Frost</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Application — Too Good To Go | Paul Frost">
+  <meta property="og:description" content="Head of Creative Production — A personal application for Too Good To Go.">
+  <meta property="og:url" content="https://roamer.se/too-good/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Application — Too Good To Go | Paul Frost">
+  <meta name="twitter:description" content="Head of Creative Production — A personal application for Too Good To Go.">
+
+  <!-- Block indexing -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <!-- Preload fonts to prevent layout shift -->
+  <link rel="preload" href="fonts/IvyPrestoHeadline-SemiBold.otf" as="font" type="font/opentype" crossorigin>
+  <link rel="preload" href="fonts/IvyPrestoHeadline-Regular.otf" as="font" type="font/opentype" crossorigin>
+  <link rel="preload" href="fonts/IvyPrestoHeadline-LightItalic.otf" as="font" type="font/opentype" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/nys7xhm.css">
+
+  <!-- Prevent browser scroll restoration (must be in <head> for earliest execution) -->
+  <script>if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
+
+  <!-- Three.js import map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="apply.css">
+
+  <!-- Favicon (reuse site favicon) -->
+  <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MMM3S6R1P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-0MMM3S6R1P');
+  </script>
+</head>
+<body>
+  <div class="grain-overlay"></div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <a href="https://roamer.se" class="hero__logo">
+    <img src="images/paulfrost-logo.svg" alt="Paul Frost">
+  </a>
+  <nav class="site-nav" id="siteNav" data-section="hero">
+    <div class="hero__top-center">
+      <div class="hero__greeting hero-fade-simple" style="--fade-delay: 0s">
+        <span data-config="greeting-before">hello</span>
+        <img src="images/tgtg-logo.png" alt="Too Good To Go" data-config-logo>
+        <span data-config="greeting-after">team!</span>
+      </div>
+    </div>
+  </nav>
+
+  <p class="hero__tagline hero-fade-simple" style="--fade-delay: 0.1s" data-config="hero-tagline">I made you a website because cover letters belong in the past. Like food waste.</p>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero section--cream" data-section="hero">
+    <div class="hero__bust" id="heroBust"></div>
+
+    <div class="hero__main">
+      <h1 class="hero__heading hero-fade" style="--fade-delay: 0.2s" data-config="hero-heading">517 million meals saved. <em class="hero__heading-italic" style="text-decoration:underline;text-underline-offset:8px;text-decoration-thickness:2px;">127 of them were mine.</em> I am here to help with the next 517 million.</h1>
+      <p class="hero__subtitle hero-fade" style="--fade-delay: 0.3s" data-config="hero-subtitle">This is my unusual application and I am your new head of creative production.</p>
+      <p class="hero__subtitle hero-fade" style="--fade-delay: 0.5s; margin-top: 50px;"><span class="hero__subtitle-emphasis">And here is why;</span></p>
+    </div>
+  </section>
+
+  <!-- ==================== WHY AXIS ==================== -->
+  <section id="why-axis" class="section section--cream section-about" data-section="whyAxis">
+    <div class="container">
+      <p class="about-intro reveal" data-config="about-intro">Before anything else, let me prove I actually understand what you do.</p>
+
+      <div class="text-reveal" id="textReveal">
+        <div class="about-columns">
+          <p class="about-column" data-config="about-col-1">You are not a food delivery app. You are a movement that turned surplus into something people actually want. 133 million users, 261,000 partners, 21 countries. But the real challenge is not saving food. It is making 500 creative assets a month feel like they all came from the same brain.</p>
+          <p class="about-column" data-config="about-col-2">Across languages, cultures, and platforms. Without losing the warmth that made people download the app in the first place. That is a creative production problem. And it is exactly the kind I solve.</p>
+        </div>
+
+        <p class="about-outro" data-config="about-outro">That someone is me. And I brought receipts.</p>
+        <div class="about-line" id="aboutLine"></div>
+        <div class="about-vline" id="aboutVLine"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CLIENT LOGOS ==================== -->
+  <section id="clients" class="clients-section section section--cream" data-section="clients">
+    <p class="clients-intro reveal" data-config="clients-intro">Now let's talk about me. But briefly, I promise.</p>
+
+    <div class="clients-grid">
+      <!-- Left marquee — scrolls up -->
+      <div class="marquee-col marquee-col--up">
+        <div class="marquee-track">
+          <div class="marquee-list">
+            <img src="images/logos/business-insider.png" alt="Business Insider">
+            <img src="images/logos/canon.png" alt="Canon">
+            <img src="images/logos/dell.png" alt="Dell">
+            <img src="images/logos/eit.png" alt="EIT">
+            <img src="images/logos/globhe.png" alt="Globhe">
+            <img src="images/logos/channel5.png" alt="Channel 5">
+            <img src="images/logos/adidem.png" alt="Adidem">
+          </div>
+          <div class="marquee-list" aria-hidden="true">
+            <img src="images/logos/business-insider.png" alt="">
+            <img src="images/logos/canon.png" alt="">
+            <img src="images/logos/dell.png" alt="">
+            <img src="images/logos/eit.png" alt="">
+            <img src="images/logos/globhe.png" alt="">
+            <img src="images/logos/channel5.png" alt="">
+            <img src="images/logos/adidem.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- Center text -->
+      <div class="clients-center">
+        <h2 class="clients-heading reveal" data-config="clients-heading">More than a decade. Clients from five continents. And some familiar names along the way.</h2>
+      </div>
+
+      <!-- Right marquee — scrolls down -->
+      <div class="marquee-col marquee-col--down">
+        <div class="marquee-track">
+          <div class="marquee-list">
+            <img src="images/logos/business-insider.png" alt="Business Insider">
+            <img src="images/logos/canon.png" alt="Canon">
+            <img src="images/logos/dell.png" alt="Dell">
+            <img src="images/logos/eit.png" alt="EIT">
+            <img src="images/logos/globhe.png" alt="Globhe">
+            <img src="images/logos/channel5.png" alt="Channel 5">
+            <img src="images/logos/adidem.png" alt="Adidem">
+          </div>
+          <div class="marquee-list" aria-hidden="true">
+            <img src="images/logos/business-insider.png" alt="">
+            <img src="images/logos/canon.png" alt="">
+            <img src="images/logos/dell.png" alt="">
+            <img src="images/logos/eit.png" alt="">
+            <img src="images/logos/globhe.png" alt="">
+            <img src="images/logos/channel5.png" alt="">
+            <img src="images/logos/adidem.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="clients-outro" id="clientsOutro" data-config="clients-outro">Apart from a quote, they all asked for the same thing:</p>
+
+  </section>
+
+  <!-- ==================== VIDEO SHOWCASE ==================== -->
+  <section class="section section--cream video-section" id="videoSection" data-section="video">
+    <div class="video-section__content">
+      <div class="video-section__intro">
+        <h2 class="video-section__heading" data-config="video-heading">...make it <span class="heading-italic">scale</span><br>without losing its soul.</h2>
+        <p class="video-section__sub" data-config="video-sub" style="visibility:hidden;">Here is what that looks like in action:</p>
+      </div>
+
+      <div class="video-section__player" id="videoPlayer" style="visibility:hidden;">
+        <iframe
+          tabindex="-1"
+          src="https://player.vimeo.com/video/1140568272?h=09bcc670dc&title=0&byline=0&portrait=0&autoplay=1&muted=1&controls=0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          loading="eager"
+          title="Urban Mobility — Carpooling Platform Film"
+        ></iframe>
+        <button class="video-play-overlay" id="videoPlayOverlay" aria-label="Play video with sound">
+          <svg width="20" height="24" viewBox="0 0 20 24" fill="none">
+            <path d="M0 0L20 12L0 24V0Z" fill="currentColor"/>
+          </svg>
+        </button>
+        <div class="video-controls" id="videoControls">
+          <button class="video-controls__pause" id="videoPauseBtn" aria-label="Pause video">
+            <svg width="18" height="24" viewBox="0 0 18 24" fill="none">
+              <rect x="0" y="0" width="6" height="24" rx="1" fill="currentColor"/>
+              <rect x="12" y="0" width="6" height="24" rx="1" fill="currentColor"/>
+            </svg>
+          </button>
+          <button class="video-controls__subtitles" id="videoSubtitlesBtn" aria-label="Toggle subtitles">CC</button>
+          <div class="video-controls__volume" id="videoVolume">
+            <div class="video-controls__volume-track">
+              <div class="video-controls__volume-fill" id="videoVolumeFill"></div>
+            </div>
+          </div>
+          <div class="video-controls__progress" id="videoProgress">
+            <div class="video-controls__progress-fill" id="videoProgressFill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-section__footer">
+        <h3 class="video-section__text" id="videoText1" data-config="video-text1">Now imagine this, but for Too Good To Go. Every market. Every format. Every platform.</h3>
+      </div>
+    </div>
+    <p class="video-outro" id="videoOutro" data-config="video-outro">But did you also know that I'm really good with?</p>
+  </section>
+
+  <!-- ==================== SKILLS ==================== -->
+  <section class="skills-section section--dark" id="skillsSection" data-section="skills">
+    <div class="skills-box">
+      <div class="skills-list" data-config-skills>
+        <div class="skills-item">
+          <span class="skills-item__num">(001)</span>
+          <span class="skills-item__word">AI</span>
+          <span class="skills-item__desc">Claude, ChatGPT, Perplexity, Adobe Generative AI. I built AI automation tools for content creation and image generation before it was a job requirement. Now it is. Good timing.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(002)</span>
+          <span class="skills-item__word">Creative Production</span>
+          <span class="skills-item__desc">End to end. From concept to delivery across multiple countries, languages, and formats. I do not just make things. I build the system that makes things repeatable.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(003)</span>
+          <span class="skills-item__word">Design</span>
+          <span class="skills-item__desc">Figma, Adobe Creative Suite. I have led design teams, directed visual output, and made sure the brand looked the same in country one and country six. No policing. Just clear systems.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(004)</span>
+          <span class="skills-item__word">Branding</span>
+          <span class="skills-item__desc">Brand identity, visual systems, guidelines. Keeping one brand consistent across 21 markets is not chaos. It is architecture. I have done it across six countries with zero misalignment.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(005)</span>
+          <span class="skills-item__word">Video</span>
+          <span class="skills-item__desc">Scripts, cinema cameras, DaVinci Resolve, Adobe Creative Cloud. From 8-million-view documentaries to product ads. When creative needs to move from static to screen, I press record.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(006)</span>
+          <span class="skills-item__word">People</span>
+          <span class="skills-item__desc">Led design teams, directed cross-functional collaborators, developed workflows that made everyone faster without making anyone miserable. The org chart was small. The output was not.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(007)</span>
+          <span class="skills-item__word">Tech &amp; Automation</span>
+          <span class="skills-item__desc">Webflow, Shopify, Supabase, Vercel. I have built platforms, automated workflows, and created content systems that run without me watching. Creative production is a system. I treat it like one.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(008)</span>
+          <span class="skills-item__word">Data</span>
+          <span class="skills-item__desc">Google Analytics, Search Console, Semrush. I track what performs, cut what does not, and make decisions with numbers. No vanity metrics. Just honest answers that make the next asset better.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(009)</span>
+          <span class="skills-item__word">Project</span>
+          <span class="skills-item__desc">Budgets, timelines, multi-country coordination. Six-country supply chains, multi-market productions, and deadlines that did not move. I ship things. On time. Every time.</span>
+        </div>
+      </div>
+
+      <div class="skills-outro">
+        <p class="skills-outro__text" data-config="skills-outro">"Cool skills Paul, but what would you actually do here?" Great question. Keep scrolling.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FRAMEWORK ==================== -->
+  <section class="proof-section section--cream" id="proofSection" data-section="proof">
+    <div class="proof-box" id="proofBox">
+      <div class="proof-content">
+        <div class="proof-left">
+          <p data-config="proof-left">You need someone who can turn one creative idea into 500 assets across 21 countries without losing the thing that makes people care. That is not production. That is a system. And I love systems.</p>
+        </div>
+        <div class="proof-right" data-config-proof-steps>
+          <div class="proof-step">
+            <h3 class="proof-step__title">
+              <span class="proof-step__title-mask">
+                <span class="proof-step__title-slide">
+                  <span class="proof-step__title-text" data-config="proof-step-1-title">01 / Build the Machine</span>
+                  <span class="proof-step__title-text" data-config-title-dup="proof-step-1-title">01 / Build the Machine</span>
+                </span>
+              </span>
+            </h3>
+            <div class="proof-step__line"></div>
+            <p class="proof-step__desc" data-config="proof-step-1-desc">Before a single asset gets made, the system needs to exist. Templates, brand toolkits, modular design frameworks. If every market starts from scratch every time, you are not scaling. You are surviving.</p>
+          </div>
+          <div class="proof-step">
+            <h3 class="proof-step__title">
+              <span class="proof-step__title-mask">
+                <span class="proof-step__title-slide">
+                  <span class="proof-step__title-text" data-config="proof-step-2-title">02 / Automate the Repetitive</span>
+                  <span class="proof-step__title-text" data-config-title-dup="proof-step-2-title">02 / Automate the Repetitive</span>
+                </span>
+              </span>
+            </h3>
+            <div class="proof-step__line"></div>
+            <p class="proof-step__desc" data-config="proof-step-2-desc">AI handles versioning, resizing, localization prep, and first-draft variations. That frees the creative team to focus on the part machines cannot do: making people feel something about a bag of rescued croissants.</p>
+          </div>
+          <div class="proof-step">
+            <h3 class="proof-step__title">
+              <span class="proof-step__title-mask">
+                <span class="proof-step__title-slide">
+                  <span class="proof-step__title-text" data-config="proof-step-3-title">03 / Localize Without Losing the Soul</span>
+                  <span class="proof-step__title-text" data-config-title-dup="proof-step-3-title">03 / Localize Without Losing the Soul</span>
+                </span>
+              </span>
+            </h3>
+            <div class="proof-step__line"></div>
+            <p class="proof-step__desc" data-config="proof-step-3-desc">What works in Copenhagen does not automatically work in Milan. The system needs to flex for culture, language, and context while keeping the brand unmistakably Too Good To Go. One global idea. Twenty-one local executions.</p>
+          </div>
+          <div class="proof-step">
+            <h3 class="proof-step__title">
+              <span class="proof-step__title-mask">
+                <span class="proof-step__title-slide">
+                  <span class="proof-step__title-text" data-config="proof-step-4-title">04 / Measure and Sharpen</span>
+                  <span class="proof-step__title-text" data-config-title-dup="proof-step-4-title">04 / Measure and Sharpen</span>
+                </span>
+              </span>
+            </h3>
+            <div class="proof-step__line"></div>
+            <p class="proof-step__desc" data-config="proof-step-4-desc">Every asset gets tracked. What performs gets scaled. What does not gets reworked. No guessing. No vanity metrics. Just a feedback loop that makes the next 500 assets better than the last.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="proof-closing" id="proofClosing" data-config="proof-closing">If you have scrolled this far, I think we both know what comes next.</p>
+    </div>
+  </section>
+
+  <!-- ==================== CTA / CLOSING ==================== -->
+  <section class="closing-section section--cream" id="closingSection" data-section="closing">
+    <div class="closing-content">
+      <h2 class="closing-heading" data-config="closing-heading">I am <span class="closing-name">Paul Frost</span>. Based in Malmö. Ready to make your creative production scale without losing its soul. Also, your surprise bags from the bakery near Nordhavn are dangerously good. Just so you know.</h2>
+      <p class="closing-sub" data-config="closing-sub">Let's grab a coffee and talk about it.</p>
+      <div class="closing-line"></div>
+      <div class="closing-contacts">
+        <span><strong>Email:</strong> <a href="mailto:paul@roamer.se" data-config="contact-email">paul@roamer.se</a></span>
+        <span><strong>Phone:</strong> <a href="tel:+46764510037" data-config="contact-phone">+46 764 51 0037</a></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="page-config.js"></script>
+  <script src="apply.js"></script>
+  <script type="module" src="bust.js"></script>
+</body>
+</html>
