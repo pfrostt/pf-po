@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Liberte Coffee — Paul Frost</title>
+  <title>Building a Cold Brew Coffee Brand from Scratch | Brand & Product Case Study | Paul Frost</title>
+  <meta name="description" content="From an idea in Northern Sweden to customers on four continents. Brand identity, packaging design, six-country supply chain, and e-commerce strategy. A full brand case study by Paul Frost, creative producer in Malmö.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Liberte Coffee — Paul Frost">
-  <meta property="og:description" content="From idea to cold brew brand in eight countries. Brand DNA, packaging, supply chain, distribution.">
+  <meta property="og:title" content="Building a Cold Brew Coffee Brand from Scratch | Brand & Product Case Study | Paul Frost">
+  <meta property="og:description" content="From an idea in Northern Sweden to customers on four continents. Brand identity, packaging design, six-country supply chain, and e-commerce strategy. A full brand case study by Paul Frost, creative producer in Malmö.">
   <meta property="og:url" content="https://roamer.se/liberte/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -36,12 +37,21 @@
     gtag('js', new Date());
     gtag('config', 'G-0MMM3S6R1P');
   </script>
+  <!-- Early mouse tracker -->
+  <script>
+    window.__mouseX = 0;
+    window.__mouseY = 0;
+    function __onPointer(e) {
+      window.__mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+      window.__mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+    }
+    document.addEventListener('mousemove', __onPointer, { capture: true, passive: true });
+  </script>
 </head>
 <body>
-  <div class="grain-overlay"></div>
 
-  <!-- ==================== LOGO & NAV ==================== -->
-  <a href="https://roamer.se" class="hero__logo">
+<!-- ==================== LOGO & NAV ==================== -->
+  <a href="https://roamer.se" class="nav__logo">
     <img src="images/paulfrost-logo.svg" alt="Paul Frost">
   </a>
 
@@ -57,24 +67,591 @@
     <a class="site-nav__link" href="https://roamer.se/#contactSection">contact</a>
   </nav>
 
+  <!-- Fixed index duplicate (outside hero, no perspective ancestor) -->
+  <div class="hero__index-fixed">
+    <div class="hero__index-row is-active" data-index-row="0">
+      <span class="hero__index-label">Gap</span>
+      <span class="hero__index-num">01</span>
+    </div>
+    <div class="hero__index-row" data-index-row="1">
+      <span class="hero__index-label">Solution</span>
+      <span class="hero__index-num">02</span>
+    </div>
+    <div class="hero__index-row" data-index-row="2">
+      <span class="hero__index-label">Brand</span>
+      <span class="hero__index-num">03</span>
+    </div>
+    <div class="hero__index-row" data-index-row="3">
+      <span class="hero__index-label">Supply Chain</span>
+      <span class="hero__index-num">04</span>
+    </div>
+    <div class="hero__index-row" data-index-row="4">
+      <span class="hero__index-label">Pivot</span>
+      <span class="hero__index-num">05</span>
+    </div>
+    <div class="hero__index-row" data-index-row="5">
+      <span class="hero__index-label">Result</span>
+      <span class="hero__index-num">06</span>
+    </div>
+    <div class="hero__index-row" data-index-row="6">
+      <span class="hero__index-label">Role &amp; Skills</span>
+      <span class="hero__index-num">07</span>
+    </div>
+  </div>
+
   <!-- ==================== HERO ==================== -->
-  <section class="hero" data-section="hero">
-    <div class="hero__content">
-      <h1 class="hero__heading">Libert&eacute; Coffee</h1>
-      <div class="hero__below">
-        <p class="hero__desc">The most beautiful hotels in the Arctic had world class rooms, world class views, and the same coffee you would find at a gas station. I thought that was worth fixing.</p>
-        <div class="hero__image-card">
-          <img src="images/hero.png" alt="Liberte cold brew coffee bottle with driftwood">
+  <div class="hero-wrap">
+  <section class="hero">
+    <div class="hero__video-wrap">
+      <video class="hero__video" autoplay muted loop playsinline>
+        <source src="video/liberte-work.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero__overlay">
+      <img class="hero__reindeer" src="images/reindeer.png" alt="Reindeer illustration">
+
+      <div class="hero__box">
+        <div class="hero__box-bg"></div>
+        <h1 class="hero__title">Libert&eacute; Coffee</h1>
+
+        <p class="hero__tagline">A cold brew coffee the Arctic actually deserved.</p>
+
+        <div class="hero__index">
+          <div class="hero__index-row" data-index-row="0">
+            <span class="hero__index-label">Gap</span>
+            <span class="hero__index-num">01</span>
+          </div>
+          <div class="hero__index-row" data-index-row="1">
+            <span class="hero__index-label">Solution</span>
+            <span class="hero__index-num">02</span>
+          </div>
+          <div class="hero__index-row" data-index-row="2">
+            <span class="hero__index-label">Brand</span>
+            <span class="hero__index-num">03</span>
+          </div>
+          <div class="hero__index-row" data-index-row="3">
+            <span class="hero__index-label">Supply Chain</span>
+            <span class="hero__index-num">04</span>
+          </div>
+          <div class="hero__index-row" data-index-row="4">
+            <span class="hero__index-label">Pivot</span>
+            <span class="hero__index-num">05</span>
+          </div>
+          <div class="hero__index-row" data-index-row="5">
+            <span class="hero__index-label">Result</span>
+            <span class="hero__index-num">06</span>
+          </div>
+          <div class="hero__index-row" data-index-row="6">
+            <span class="hero__index-label">Role &amp; Skills</span>
+            <span class="hero__index-num">07</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
+  </div>
+
+    <!-- ==================== GAP ==================== -->
+    <section class="scene scene--gap scene--light" data-section-index="0">
+      <h2 class="gap__heading">Two problems, <em>Same root</em></h2>
+
+      <p class="gap__subheading">Everyone raised the bar except the drink menu.</p>
+      <p class="gap__desc">The hospitality world perfected everything except the non-alcoholic menu. The consumer world had a hundred coffee brands saying the right things and none of them doing it. Both deserved better.</p>
+
+      <div class="gap__cards">
+        <!-- Interactive cards -->
+        <div class="gap__card" data-card="interactive" style="--card-x: 52%; --card-y: 0%;">
+          <p class="gap__card-quote">"We spend months designing every detail of the guest experience. Then someone orders a non-alcoholic drink and we hand them the same bottle you would find at an airport."</p>
+          <span class="gap__card-title">Hotel Manager</span>
+        </div>
+
+        <div class="gap__card" data-card="interactive" style="--card-x: 8%; --card-y: 30%;">
+          <p class="gap__card-quote">"Our food menu tells a story. Our wine list tells a story. Our non-alcoholic options tell people we ran out of ideas."</p>
+          <span class="gap__card-title">Restaurant Owner</span>
+        </div>
+
+        <div class="gap__card" data-card="interactive" style="--card-x: 42%; --card-y: 28%;">
+          <p class="gap__card-quote">"I built a whole programme around mindful travel. Then I looked at what we actually serve and realised the drinks undercut every promise we make."</p>
+          <span class="gap__card-title">Head of Guest Experience</span>
+        </div>
+
+        <div class="gap__card" data-card="interactive" style="--card-x: 55%; --card-y: 58%;">
+          <p class="gap__card-quote">"Every brand says sustainable. Then you look at the packaging and it is plastic wrapped in more plastic."</p>
+          <span class="gap__card-title">Conscious Consumer</span>
+        </div>
+
+        <div class="gap__card" data-card="interactive" style="--card-x: 18%; --card-y: 62%;">
+          <p class="gap__card-quote">"I want to discover something that feels local and intentional — not another global brand pretending to be craft."</p>
+          <span class="gap__card-title">Experience Seeker</span>
+        </div>
+
+        <!-- Ghost / empty cards — scattered field effect -->
+        <!-- Row 1: top edge -->
+        <div class="gap__card gap__card--empty" data-card="empty" style="--card-x: 2%; --card-y: 5%;"></div>
+        <div class="gap__card gap__card--empty-md" data-card="empty" style="--card-x: 35%; --card-y: 3%;"></div>
+        <div class="gap__card gap__card--empty-sm" data-card="empty" style="--card-x: 82%; --card-y: 10%;"></div>
+        <div class="gap__card gap__card--empty-xs" data-card="empty" style="--card-x: 90%; --card-y: 22%;"></div>
+        <div class="gap__card gap__card--empty-tiny" data-card="empty" style="--card-x: 25%; --card-y: 1%;"></div>
+        <div class="gap__card gap__card--empty-xxs" data-card="empty" style="--card-x: 70%; --card-y: 6%;"></div>
+
+        <!-- Row 2: upper-mid -->
+        <div class="gap__card gap__card--empty-md" data-card="empty" style="--card-x: 0%; --card-y: 18%;"></div>
+        <div class="gap__card gap__card--empty-xs" data-card="empty" style="--card-x: 28%; --card-y: 22%;"></div>
+        <div class="gap__card gap__card--empty-xxs" data-card="empty" style="--card-x: 38%; --card-y: 16%;"></div>
+        <div class="gap__card gap__card--empty-tiny" data-card="empty" style="--card-x: 92%; --card-y: 14%;"></div>
+        <div class="gap__card gap__card--empty-sm" data-card="empty" style="--card-x: 68%; --card-y: 20%;"></div>
+
+        <!-- Row 3: mid-band (dense accumulation area) -->
+        <div class="gap__card gap__card--empty" data-card="empty" style="--card-x: 75%; --card-y: 38%;"></div>
+        <div class="gap__card gap__card--empty-xs" data-card="empty" style="--card-x: 65%; --card-y: 34%;"></div>
+        <div class="gap__card gap__card--empty-xxs" data-card="empty" style="--card-x: 58%; --card-y: 42%;"></div>
+        <div class="gap__card gap__card--empty-tiny" data-card="empty" style="--card-x: 72%; --card-y: 48%;"></div>
+        <div class="gap__card gap__card--empty-sm" data-card="empty" style="--card-x: 88%; --card-y: 42%;"></div>
+
+        <!-- Row 4: lower-mid -->
+        <div class="gap__card gap__card--empty-sm" data-card="empty" style="--card-x: 5%; --card-y: 50%;"></div>
+        <div class="gap__card gap__card--empty-xs" data-card="empty" style="--card-x: 40%; --card-y: 52%;"></div>
+        <div class="gap__card gap__card--empty-md" data-card="empty" style="--card-x: 85%; --card-y: 55%;"></div>
+        <div class="gap__card gap__card--empty-tiny" data-card="empty" style="--card-x: 30%; --card-y: 56%;"></div>
+        <div class="gap__card gap__card--empty-xxs" data-card="empty" style="--card-x: 50%; --card-y: 60%;"></div>
+
+        <!-- Row 5: bottom band -->
+        <div class="gap__card gap__card--empty" data-card="empty" style="--card-x: 0%; --card-y: 75%;"></div>
+        <div class="gap__card gap__card--empty-sm" data-card="empty" style="--card-x: 48%; --card-y: 80%;"></div>
+        <div class="gap__card gap__card--empty-xs" data-card="empty" style="--card-x: 78%; --card-y: 78%;"></div>
+        <div class="gap__card gap__card--empty-md" data-card="empty" style="--card-x: 62%; --card-y: 88%;"></div>
+        <div class="gap__card gap__card--empty-xxs" data-card="empty" style="--card-x: 15%; --card-y: 85%;"></div>
+        <div class="gap__card gap__card--empty-tiny" data-card="empty" style="--card-x: 88%; --card-y: 82%;"></div>
+        <div class="gap__card gap__card--empty-xs" data-card="empty" style="--card-x: 35%; --card-y: 90%;"></div>
+        <div class="gap__card gap__card--empty-tiny" data-card="empty" style="--card-x: 5%; --card-y: 92%;"></div>
+        <div class="gap__card gap__card--empty-xxs" data-card="empty" style="--card-x: 75%; --card-y: 94%;"></div>
+      </div>
+    </section>
+
+    <!-- ==================== SOLUTION ==================== -->
+    <section class="scene scene--solution scene--light" data-section-index="1">
+      <div class="solution">
+        <div class="solution__text">
+          <h2 class="solution__heading"><em>So I built one</em></h2>
+          <p class="solution__subheading">Fire, water, and a reason to exist.</p>
+          <p class="solution__desc">A cold brew coffee built from nothing. No template. No existing brand to iterate on. Every decision, from the roaster in Italy to the glass from Germany, made to create something that finally matched the standard it was being held to.</p>
+
+          <div class="solution__cards">
+            <div class="solution__card" data-card-num="1">
+              <span class="solution__card-num">01</span>
+              <p class="solution__card-text">Wood-roasted beans from a family roaster in Trieste, Italy.</p>
+            </div>
+            <div class="solution__card" data-card-num="2">
+              <span class="solution__card-num">02</span>
+              <p class="solution__card-text">Brewed with arctic water. No shortcuts. No heat.</p>
+            </div>
+            <div class="solution__card" data-card-num="3">
+              <span class="solution__card-num">03</span>
+              <p class="solution__card-text">Bottled ready to drink. Made to belong where it is served.</p>
+            </div>
+            <div class="solution__card" data-card-num="4">
+              <span class="solution__card-num">04</span>
+              <p class="solution__card-text">Gold foil on raw cardboard. Sustainable never looked this good.</p>
+            </div>
+          </div>
+        </div>
+        <div class="solution__box">
+          <img class="solution__box-open" src="images/box-open.png" alt="Liberté bottle in open box">
+          <img class="solution__box-closed" src="images/box-closed.png" alt="Liberté closed box">
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BRAND ==================== -->
+    <section class="scene scene--brand scene--light" data-section-index="2">
+      <h2 class="brand__heading">Every Detail is a <em>Decision</em></h2>
+      <p class="brand__subheading">A visual system designed to feel like the world it was made for.</p>
+      <p class="brand__desc">The brand identity was not designed to look good. It was designed to feel right. Every element traces back to the same source: arctic nature, raw materials, and zero compromise.</p>
+
+      <blockquote class="brand__quote">
+        The test was simple: does this belong in <strong>a world-class hotel</strong> and on <strong>a hiking trail</strong> at the same time?
+      </blockquote>
+
+      <div class="brand__dark">
+        <img class="brand__mountain" src="images/mountain-top.svg" alt="" aria-hidden="true">
+        <div class="brand__dark-content">
+          <div class="brand__video-wrap">
+            <video class="brand__video" autoplay muted loop playsinline>
+              <source src="video/mockup.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="brand__identity">
+            <p class="brand__identity-text">Premium and sustainable built into the same product, not printed on top of it.</p>
+            <div class="brand__identity-video-wrap">
+              <video class="brand__video" autoplay muted loop playsinline>
+                <source src="video/liberte-brand-identity.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="brand__mountain-bottom" src="images/mountain-bottom.svg" alt="" aria-hidden="true">
+    </section>
+
+    <!-- ==================== SUPPLY CHAIN ==================== -->
+    <section class="scene scene--supply scene--light" data-section-index="3">
+      <h2 class="supply__heading">Sourced to Match</h2>
+
+      <p class="supply__subheading">A supply chain built with the same intention as the brand itself.</p>
+      <p class="supply__desc">Every material went through the same filter. Does it match the standard of the product? If not, start over. Four countries, hundreds of samples, one rule.</p>
+
+      <div class="supply__cards">
+        <img class="supply__hero-img" src="images/bottle-branch.png" alt="Liberté bottle on driftwood" aria-hidden="true">
+        <!-- Interactive cards -->
+        <div class="supply__card" data-card="interactive" style="--card-x: 52%; --card-y: 0%;">
+          <p class="supply__card-product">Product: <strong>BOTTLE</strong></p>
+          <p class="supply__card-tagline">Fits in a hand and on a hotel shelf.</p>
+          <div class="supply__card-bottom">
+            <ul class="supply__card-specs">
+              <li>200ml flask glass</li>
+              <li>150g weight</li>
+              <li>155.5mm x 74mm</li>
+              <li>Flint clear finish</li>
+            </ul>
+            <p class="supply__card-source">Source: <strong>GERMANY</strong></p>
+          </div>
+        </div>
+
+        <div class="supply__card" data-card="interactive" style="--card-x: 8%; --card-y: 25%;">
+          <p class="supply__card-product">Product: <strong>RIGID BOX</strong></p>
+          <p class="supply__card-tagline">The unboxing should feel like the first sip.</p>
+          <div class="supply__card-bottom">
+            <ul class="supply__card-specs">
+              <li>215 x 200 x 40mm</li>
+              <li>Eskamono Black 2mm</li>
+              <li>Recycled paper</li>
+              <li>Gold foil finish</li>
+              <li>Custom insert</li>
+            </ul>
+            <p class="supply__card-source">Source: <strong>SWEDEN</strong></p>
+          </div>
+        </div>
+
+        <div class="supply__card" data-card="interactive" style="--card-x: 42%; --card-y: 28%;">
+          <p class="supply__card-product">Product: <strong>COFFEE</strong></p>
+          <p class="supply__card-tagline">Fire and wood do what machines cannot.</p>
+          <div class="supply__card-bottom">
+            <ul class="supply__card-specs">
+              <li>Premium blend</li>
+              <li>Wood-roasted by a family roaster</li>
+              <li>Antica Tostatura Triestina</li>
+            </ul>
+            <p class="supply__card-source">Source: <strong>TRIESTE, ITALY</strong></p>
+          </div>
+        </div>
+
+        <div class="supply__card" data-card="interactive" style="--card-x: 55%; --card-y: 55%;">
+          <p class="supply__card-product">Product: <strong>TRANSPORT BOX</strong></p>
+          <p class="supply__card-tagline">Arrives exactly as it left.</p>
+          <div class="supply__card-bottom">
+            <ul class="supply__card-specs">
+              <li>380 x 380 x 160mm</li>
+              <li>3-wall corrugated carton</li>
+            </ul>
+            <p class="supply__card-source">Source: <strong>POLAND</strong></p>
+          </div>
+        </div>
+
+        <div class="supply__card" data-card="interactive" style="--card-x: 18%; --card-y: 58%;">
+          <p class="supply__card-product">Product: <strong>LABELS</strong></p>
+          <p class="supply__card-tagline">The first thing you touch tells you everything.</p>
+          <div class="supply__card-bottom">
+            <ul class="supply__card-specs">
+              <li>Cotton paper</li>
+              <li>Gold foil embossment</li>
+            </ul>
+            <p class="supply__card-source">Source: <strong>ITALY</strong></p>
+          </div>
+        </div>
+
+        <div class="supply__card" data-card="interactive" style="--card-x: 0%; --card-y: 82%;">
+          <p class="supply__card-product">Product: <strong>STATIONERY</strong></p>
+          <p class="supply__card-tagline">Every piece of paper carries the same standard as the product.</p>
+          <div class="supply__card-bottom">
+            <ul class="supply__card-specs">
+              <li>Colorplan paper</li>
+              <li>Gold foil application</li>
+              <li>Premium weight and texture</li>
+            </ul>
+            <p class="supply__card-source">Source: <strong>UNITED KINGDOM</strong></p>
+          </div>
+        </div>
+
+        <!-- Ghost / empty cards -->
+        <div class="supply__card supply__card--empty" data-card="empty" style="--card-x: 2%; --card-y: 5%;"></div>
+        <div class="supply__card supply__card--empty-sm" data-card="empty" style="--card-x: 82%; --card-y: 10%;"></div>
+        <div class="supply__card supply__card--empty-xs" data-card="empty" style="--card-x: 90%; --card-y: 22%;"></div>
+        <div class="supply__card supply__card--empty-md" data-card="empty" style="--card-x: 0%; --card-y: 18%;"></div>
+        <div class="supply__card supply__card--empty-tiny" data-card="empty" style="--card-x: 68%; --card-y: 20%;"></div>
+        <div class="supply__card supply__card--empty-xs" data-card="empty" style="--card-x: 75%; --card-y: 38%;"></div>
+        <div class="supply__card supply__card--empty-sm" data-card="empty" style="--card-x: 88%; --card-y: 48%;"></div>
+        <div class="supply__card supply__card--empty-xxs" data-card="empty" style="--card-x: 40%; --card-y: 52%;"></div>
+        <div class="supply__card supply__card--empty" data-card="empty" style="--card-x: 78%; --card-y: 72%;"></div>
+        <div class="supply__card supply__card--empty-md" data-card="empty" style="--card-x: 48%; --card-y: 80%;"></div>
+        <div class="supply__card supply__card--empty-tiny" data-card="empty" style="--card-x: 85%; --card-y: 88%;"></div>
+        <div class="supply__card supply__card--empty-xs" data-card="empty" style="--card-x: 35%; --card-y: 92%;"></div>
+      </div>
+    </section>
+
+    <!-- ==================== PIVOT ==================== -->
+    <section class="scene scene--pivot scene--light" data-section-index="4">
+      <div class="pivot">
+        <h2 class="pivot__heading">When the Market Says <em>No</em></h2>
+        <p class="pivot__subheading">From cold walk-ins across Europe to e-commerce sales across four continents.</p>
+        <div class="pivot__body">
+          <div class="pivot__image-wrap">
+            <img class="pivot__image" src="images/pivot-product.jpg" alt="Liberté coffee bottles and packaging">
+          </div>
+          <div class="pivot__text">
+            <p class="pivot__desc">The original plan was B2B. Wholesale to high-end hotels and restaurants in Northern Sweden. I got deals with a few. Sales were not enough. So I packed samples and flew to Europe. No meetings booked. No warm introductions. Just cold walk-ins to hundreds of hotels and restaurants across the continent. It did not work.</p>
+            <p class="pivot__desc">Cold brew was established in the US but still unfamiliar in the European market. The product was too new and the sales cycle too slow for a one-person operation running on conviction instead of capital. I stopped and asked a different question. If the B2B channel is not ready, can the product find its people directly? It could. I shifted to direct-to-consumer e-commerce. DTC, Amazon, and Etsy. The brand identity did exactly what it was designed to do: stop someone mid-scroll and make them curious enough to try it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene scene--result scene--light" data-section-index="5">
+      <div class="result">
+        <div class="result__text">
+          <h2 class="result__heading">Eight Countries. Four Continents. <em>One Person.</em></h2>
+          <p class="result__subheading">A cold brew coffee brand that sold itself once people found it.</p>
+          <p class="result__desc">The brand reached 8 countries across 4 continents. Not through a distributor or a sales team. Through e-commerce, organic discovery, and a product that looked and felt exactly as intentional as it was.</p>
+        </div>
+        <div class="result__mockup-wrap">
+          <div class="result__phone">
+            <img class="result__phone-frame" src="images/iphone-frame.png" alt="">
+            <div class="result__phone-screen">
+              <div class="result__shipment-header">
+                <span class="result__shipment-title">Shipment History</span>
+              </div>
+              <div class="result__shipment-list">
+                <div class="result__shipment-row">
+                  <span class="result__shipment-num">01</span>
+                  <div class="result__shipment-info">
+                    <span class="result__shipment-location">Granada Hills, USA</span>
+                    <span class="result__shipment-meta">12 Dec 2023 · Etsy</span>
+                  </div>
+                  <span class="result__shipment-status">Delivered</span>
+                </div>
+                <div class="result__shipment-row">
+                  <span class="result__shipment-num">02</span>
+                  <div class="result__shipment-info">
+                    <span class="result__shipment-location">Stockholm, Sweden</span>
+                    <span class="result__shipment-meta">28 Nov 2023 · DTC</span>
+                  </div>
+                  <span class="result__shipment-status">Delivered</span>
+                </div>
+                <div class="result__shipment-row">
+                  <span class="result__shipment-num">03</span>
+                  <div class="result__shipment-info">
+                    <span class="result__shipment-location">Melbourne, Australia</span>
+                    <span class="result__shipment-meta">15 Nov 2023 · Etsy</span>
+                  </div>
+                  <span class="result__shipment-status">Delivered</span>
+                </div>
+                <div class="result__shipment-row">
+                  <span class="result__shipment-num">04</span>
+                  <div class="result__shipment-info">
+                    <span class="result__shipment-location">London, United Kingdom</span>
+                    <span class="result__shipment-meta">3 Nov 2023 · DTC</span>
+                  </div>
+                  <span class="result__shipment-status">Delivered</span>
+                </div>
+                <div class="result__shipment-row">
+                  <span class="result__shipment-num">05</span>
+                  <div class="result__shipment-info">
+                    <span class="result__shipment-location">Kiruna, Sweden</span>
+                    <span class="result__shipment-meta">22 Oct 2023 · DTC</span>
+                  </div>
+                  <span class="result__shipment-status">Delivered</span>
+                </div>
+                <div class="result__shipment-row">
+                  <span class="result__shipment-num">06</span>
+                  <div class="result__shipment-info">
+                    <span class="result__shipment-location">Berlin, Germany</span>
+                    <span class="result__shipment-meta">10 Oct 2023 · Amazon</span>
+                  </div>
+                  <span class="result__shipment-status">Delivered</span>
+                </div>
+                <div class="result__shipment-row">
+                  <span class="result__shipment-num">07</span>
+                  <div class="result__shipment-info">
+                    <span class="result__shipment-location">Toronto, Canada</span>
+                    <span class="result__shipment-meta">28 Sep 2023 · Etsy</span>
+                  </div>
+                  <span class="result__shipment-status">Delivered</span>
+                </div>
+                <div class="result__shipment-row">
+                  <span class="result__shipment-num">08</span>
+                  <div class="result__shipment-info">
+                    <span class="result__shipment-location">Gothenburg, Sweden</span>
+                    <span class="result__shipment-meta">14 Sep 2023 · DTC</span>
+                  </div>
+                  <span class="result__shipment-status">Delivered</span>
+                </div>
+                <div class="result__shipment-row">
+                  <span class="result__shipment-num">09</span>
+                  <div class="result__shipment-info">
+                    <span class="result__shipment-location">Dubai, UAE</span>
+                    <span class="result__shipment-meta">1 Sep 2023 · DTC</span>
+                  </div>
+                  <span class="result__shipment-status">Delivered</span>
+                </div>
+                <div class="result__shipment-row">
+                  <span class="result__shipment-num">10</span>
+                  <div class="result__shipment-info">
+                    <span class="result__shipment-location">San Francisco, USA</span>
+                    <span class="result__shipment-meta">19 Aug 2023 · Etsy</span>
+                  </div>
+                  <span class="result__shipment-status">Delivered</span>
+                </div>
+                <div class="result__shipment-row">
+                  <span class="result__shipment-num">11</span>
+                  <div class="result__shipment-info">
+                    <span class="result__shipment-location">Paris, France</span>
+                    <span class="result__shipment-meta">5 Aug 2023 · Amazon</span>
+                  </div>
+                  <span class="result__shipment-status">Delivered</span>
+                </div>
+                <div class="result__shipment-row">
+                  <span class="result__shipment-num">12</span>
+                  <div class="result__shipment-info">
+                    <span class="result__shipment-location">Sydney, Australia</span>
+                    <span class="result__shipment-meta">22 Jul 2023 · Etsy</span>
+                  </div>
+                  <span class="result__shipment-status">Delivered</span>
+                </div>
+                <div class="result__shipment-row">
+                  <span class="result__shipment-num">13</span>
+                  <div class="result__shipment-info">
+                    <span class="result__shipment-location">Lule&aring;, Sweden</span>
+                    <span class="result__shipment-meta">8 Jul 2023 · DTC</span>
+                  </div>
+                  <span class="result__shipment-status">Delivered</span>
+                </div>
+                <div class="result__shipment-row">
+                  <span class="result__shipment-num">14</span>
+                  <div class="result__shipment-info">
+                    <span class="result__shipment-location">New York, USA</span>
+                    <span class="result__shipment-meta">25 Jun 2023 · Amazon</span>
+                  </div>
+                  <span class="result__shipment-status">Delivered</span>
+                </div>
+                <div class="result__shipment-row">
+                  <span class="result__shipment-num">15</span>
+                  <div class="result__shipment-info">
+                    <span class="result__shipment-location">Manchester, United Kingdom</span>
+                    <span class="result__shipment-meta">10 Jun 2023 · Etsy</span>
+                  </div>
+                  <span class="result__shipment-status">Delivered</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section class="skills-section section--dark" id="skillsSection" data-section-index="6">
+      <div class="skills-header">
+        <h2 class="skills-header__heading">The Role</h2>
+        <p class="skills-header__subheading">One Person. Many Hats.</p>
+        <p class="skills-header__desc">Not a client project. Just proof that one person with enough coffee can go quite far.</p>
+      </div>
+      <div class="skills-box">
+        <div class="skills-list">
+          <div class="skills-item">
+            <span class="skills-item__num">(001)</span>
+            <span class="skills-item__word">Branding</span>
+            <span class="skills-item__desc">Brand identity, visual systems, brand voice, guidelines. Built the entire DNA from scratch. Gold foil on raw cardboard was not an accident.</span>
+          </div>
+          <div class="skills-item">
+            <span class="skills-item__num">(002)</span>
+            <span class="skills-item__word">Marketing</span>
+            <span class="skills-item__desc">Market analysis, content strategy, multichannel distribution. Studied the gap, planned the entry, pivoted the entire model, and still hit the target.</span>
+          </div>
+          <div class="skills-item">
+            <span class="skills-item__num">(003)</span>
+            <span class="skills-item__word">Project</span>
+            <span class="skills-item__desc">Budgets, timelines, six-country supplier coordination. No project manager. Just a spreadsheet and a refusal to miss a deadline.</span>
+          </div>
+          <div class="skills-item">
+            <span class="skills-item__num">(004)</span>
+            <span class="skills-item__word">Design</span>
+            <span class="skills-item__desc">Figma, Adobe Creative Suite. Led the design teams and directed every visual element from label to rigid box. Managed the people. Approved the pixels.</span>
+          </div>
+          <div class="skills-item">
+            <span class="skills-item__num">(005)</span>
+            <span class="skills-item__word">Supply Chain</span>
+            <span class="skills-item__desc">Sourced from six countries. Bottles, beans, boxes, labels, stationery. Every supplier vetted, every material tested, every shipment tracked.</span>
+          </div>
+          <div class="skills-item">
+            <span class="skills-item__num">(006)</span>
+            <span class="skills-item__word">Web</span>
+            <span class="skills-item__desc">Webflow, Shopify. Built the brand site and the e-commerce store. Both had to look as good as the packaging.</span>
+          </div>
+          <div class="skills-item">
+            <span class="skills-item__num">(007)</span>
+            <span class="skills-item__word">E-Commerce</span>
+            <span class="skills-item__desc">DTC, Amazon, Etsy. Built the storefronts, managed the listings, handled fulfillment. The pivot that took Libert&eacute; to four continents.</span>
+          </div>
+          <div class="skills-item">
+            <span class="skills-item__num">(008)</span>
+            <span class="skills-item__word">SEO</span>
+            <span class="skills-item__desc">Semrush, Google Analytics, keyword research, content optimization. Made a cold brew brand from Northern Sweden findable by people who did not know they were looking for it.</span>
+          </div>
+          <div class="skills-item">
+            <span class="skills-item__num">(009)</span>
+            <span class="skills-item__word">Packaging Design</span>
+            <span class="skills-item__desc">Rigid boxes, glass bottles, cotton paper labels, gold foil embossment. Directed every material choice. The packaging is the brand before anyone takes a sip.</span>
+          </div>
+          <div class="skills-item">
+            <span class="skills-item__num">(010)</span>
+            <span class="skills-item__word">Video</span>
+            <span class="skills-item__desc">Founder story, product ads, cinema cameras. Filmed it all. Directed it all. Tried not to drink all the product between takes.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="contact">
+      <div class="contact__intro">
+        <p class="contact__intro-text">The page ends and the conversation starts here.</p>
+      </div>
+
+      <div class="contact__content">
+        <p class="contact__text">I am <strong><em>Paul Frost.</em></strong> Based in Malm&#246;. If you have a story worth telling, a brand worth building, or just really good office snacks, let's talk.</p>
+        <hr class="contact__divider">
+        <p class="contact__email"><strong>Email:</strong> <a href="mailto:paul@roamer.se">paul@roamer.se</a></p>
+        <div class="contact__socials">
+          <a href="https://www.linkedin.com/in/paulfrostt/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="../images/linkedin.svg" alt="LinkedIn" width="16" height="16">
+          </a>
+          <a href="https://www.instagram.com/paulfrostt" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="../images/instagram.svg" alt="Instagram" width="16" height="16">
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <div class="scroll-timeline">
+    <div class="scroll-timeline__line"></div>
+    <div class="scroll-timeline__dot"></div>
+  </div>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/Observer.min.js"></script>
   <script src="liberte.js"></script>
 </body>
 </html>

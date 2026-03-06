@@ -16,7 +16,8 @@
       image: null,
       video: 'videos/liberte.mp4',
       title: 'Liberte Coffee',
-      desc: 'Liberte started as an idea and became a cold brew coffee brand in eight countries across four continents. I built the brand DNA, led the design teams, sourced materials, set up production, and handled distribution. Everything recyclable. Everything intentional. Gold foil on raw cardboard because sustainability should not mean looking like you gave up.'
+      desc: 'Liberte started as an idea and became a cold brew coffee brand in eight countries across four continents. I built the brand DNA, led the design teams, sourced materials, set up production, and handled distribution. Everything recyclable. Everything intentional. Gold foil on raw cardboard because sustainability should not mean looking like you gave up.',
+      link: 'liberte/'
     },
     {
       searchText: 'how to get sales with zero ad spend',
@@ -124,6 +125,8 @@
 
 
   var currentWork   = 0;
+  window.WORKS = WORKS;
+  window.currentWork = currentWork;
   var isAnimating   = false;
   var cycleTimer    = null;
   var typeTimer     = null;
@@ -544,6 +547,7 @@
     var workIndex = index % WORKS.length;
     var work = WORKS[workIndex];
     currentWork = index;
+    window.currentWork = index;
 
     updatePagination(index);
     resetAll();
@@ -609,6 +613,7 @@
     var workIndex = index % WORKS.length;
     var work = WORKS[workIndex];
     currentWork = index;
+    window.currentWork = index;
 
     updatePagination(index);
 
