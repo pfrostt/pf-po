@@ -20,6 +20,20 @@
       link: 'liberte/'
     },
     {
+      searchText: 'filmmaker who can make complex topics actually interesting',
+      suggestions: [
+        'someone who <strong>films in minus forty and still delivers</strong>',
+        '<strong>filmmaker</strong> who made someone care about <strong>winter cycling</strong>',
+        '<strong>storyteller who does</strong> not need a narrator to <strong>make a point</strong>'
+      ],
+      tags: ['Documentary Filmmaking', 'Storytelling', 'Sit Down Interviews', 'Cinematography', 'Color Grading', 'Narrative Film', 'Multi-Country Production', 'Sustainability Content'],
+      image: null,
+      video: 'videos/eit.mp4',
+      title: 'EIT Urban Mobility',
+      desc: 'Can you bike to work when it is minus forty? That is the kind of question I turned into a film people actually wanted to watch. Multiple documentary and narrative projects for EIT Urban Mobility, shot across three countries. Complex problems around urban planning and sustainable transport, told through real people and real stories. Interviews, cinematography, color grading, and storytelling that makes innovation feel human instead of institutional.',
+      link: 'eit-urban-mobility/'
+    },
+    {
       searchText: 'how to get sales with zero ad spend',
       suggestions: [
         '<strong>how to get</strong> sales without selling <strong>your soul</strong>',
@@ -59,19 +73,6 @@
       video: 'videos/business.mp4',
       title: 'Business Insider',
       desc: 'Eight million views. That is how many people watched a documentary I shot for Business Insider. I did not just show up with a camera. I researched the subject, found the people worth interviewing, scouted every location, and filmed across Norway and Nigeria while working with a UK based producer. Cinematography and aerial. Pre-production to final delivery.'
-    },
-    {
-      searchText: 'filmmaker who can make complex topics actually interesting',
-      suggestions: [
-        'someone who <strong>films in minus forty and still delivers</strong>',
-        '<strong>filmmaker</strong> who made someone care about <strong>winter cycling</strong>',
-        '<strong>storyteller who does</strong> not need a narrator to <strong>make a point</strong>'
-      ],
-      tags: ['Documentary Filmmaking', 'Storytelling', 'Sit Down Interviews', 'Cinematography', 'Color Grading', 'Narrative Film', 'Multi-Country Production', 'Sustainability Content'],
-      image: null,
-      video: 'videos/eit.mp4',
-      title: 'EIT Urban Mobility',
-      desc: 'Can you bike to work when it is minus forty? That is the kind of question I turned into a film people actually wanted to watch. Multiple documentary and narrative projects for EIT Urban Mobility, shot across three countries. Complex problems around urban planning and sustainable transport, told through real people and real stories. Interviews, cinematography, color grading, and storytelling that makes innovation feel human instead of institutional.'
     },
     {
       searchText: 'someone who can capture the human story behind a brand',

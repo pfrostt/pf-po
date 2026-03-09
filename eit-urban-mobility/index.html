@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EIT Urban Mobility | Documentary Filmmaking Across Scandinavia | Paul Frost</title>
+  <meta name="description" content="Documentary and narrative films for EIT Urban Mobility across Sweden, Denmark, and Norway. Directed, filmed, edited, and graded by Paul Frost. Real people, real cities, complex topics made human.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="EIT Urban Mobility | Documentary Filmmaking Across Scandinavia | Paul Frost">
+  <meta property="og:description" content="Documentary and narrative films for EIT Urban Mobility across Sweden, Denmark, and Norway. Directed, filmed, edited, and graded by Paul Frost. Real people, real cities, complex topics made human.">
+  <meta property="og:url" content="https://roamer.se/eit-urban-mobility/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+  <!-- Fonts -->
+  <link rel="preload" href="../liberte/fonts/IvyPrestoHeadline-SemiBold.otf" as="font" type="font/opentype" crossorigin>
+  <link rel="preload" href="../liberte/fonts/IvyPrestoHeadline-Regular.otf" as="font" type="font/opentype" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/nys7xhm.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- Lenis smooth scroll -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="eit.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../images/favicon.jpg" type="image/x-icon">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MMM3S6R1P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-0MMM3S6R1P');
+  </script>
+</head>
+<body>
+
+<!-- ==================== LOGO & NAV ==================== -->
+  <a href="https://roamer.se" class="hero__logo">
+    <img src="../images/paulfrost-logo.svg" alt="Paul Frost">
+  </a>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span class="hamburger__line"></span>
+    <span class="hamburger__line"></span>
+  </button>
+
+  <nav class="site-nav" id="siteNav">
+    <a class="site-nav__link" href="https://roamer.se/#worksSection">work</a>
+    <a class="site-nav__link" href="https://roamer.se/#clientsSection">reference</a>
+    <a class="site-nav__link" href="https://roamer.se/#aboutSection">about</a>
+    <a class="site-nav__link" href="https://roamer.se/#contactSection">contact</a>
+  </nav>
+
+<!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="hero__float hero__float--1">
+      <video src="videos/1.mp4" poster="videos/poster-1.jpg" muted loop playsinline preload="none"></video>
+    </div>
+    <div class="hero__float hero__float--2">
+      <video src="videos/2.mp4" poster="videos/poster-2.jpg" muted loop playsinline preload="none"></video>
+    </div>
+    <div class="hero__float hero__float--3">
+      <video src="videos/3.mp4" poster="videos/poster-3.jpg" muted loop playsinline preload="none"></video>
+    </div>
+    <div class="hero__float hero__float--4">
+      <video src="videos/4.mp4" poster="videos/poster-4.jpg" muted loop playsinline preload="none"></video>
+    </div>
+    <div class="hero__float hero__float--5">
+      <video src="videos/5.mp4" poster="videos/poster-5.jpg" muted loop playsinline preload="none"></video>
+    </div>
+
+    <div class="hero__content">
+      <h1 class="hero__title">Complex Problems.<br>Human Stories.</h1>
+      <p class="hero__subtitle">Multiple films. Three countries. One goal: make urban planning feel human.</p>
+
+    </div>
+  </section>
+
+<!-- ==================== VIDEO SLIDER ==================== -->
+  <section class="slider">
+    <div class="slider__stage" id="sliderStage">
+
+      <div class="slider__slide is-active" data-index="0">
+        <div class="slider__thumb">
+          <img src="videos/poster-1.jpg" alt="I Cycle, I Feel the Cold, But I'll Be Better Soon">
+          <button class="slider__play" aria-label="Play video">
+            <svg width="68" height="68" viewBox="0 0 68 68" fill="none"><circle cx="34" cy="34" r="34" fill="rgba(0,0,0,0.55)"/><polygon points="28,20 28,48 50,34" fill="#fff"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="slider__slide is-next" data-index="1">
+        <div class="slider__thumb">
+          <img src="videos/poster-2.jpg" alt="Video 2">
+          <button class="slider__play" aria-label="Play video">
+            <svg width="68" height="68" viewBox="0 0 68 68" fill="none"><circle cx="34" cy="34" r="34" fill="rgba(0,0,0,0.55)"/><polygon points="28,20 28,48 50,34" fill="#fff"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="slider__slide is-far-right" data-index="2">
+        <div class="slider__thumb">
+          <img src="videos/poster-3.jpg" alt="Video 3">
+          <button class="slider__play" aria-label="Play video">
+            <svg width="68" height="68" viewBox="0 0 68 68" fill="none"><circle cx="34" cy="34" r="34" fill="rgba(0,0,0,0.55)"/><polygon points="28,20 28,48 50,34" fill="#fff"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="slider__slide is-far-left" data-index="3">
+        <div class="slider__thumb">
+          <img src="videos/poster-4.jpg" alt="Video 4">
+          <button class="slider__play" aria-label="Play video">
+            <svg width="68" height="68" viewBox="0 0 68 68" fill="none"><circle cx="34" cy="34" r="34" fill="rgba(0,0,0,0.55)"/><polygon points="28,20 28,48 50,34" fill="#fff"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="slider__slide is-prev" data-index="4">
+        <div class="slider__thumb">
+          <img src="videos/poster-5.jpg" alt="Video 5">
+          <button class="slider__play" aria-label="Play video">
+            <svg width="68" height="68" viewBox="0 0 68 68" fill="none"><circle cx="34" cy="34" r="34" fill="rgba(0,0,0,0.55)"/><polygon points="28,20 28,48 50,34" fill="#fff"/></svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="slider__info" id="sliderInfo"></div>
+    <div class="slider__desc" id="sliderDesc"></div>
+  </section>
+
+<!-- ==================== CONTACT ==================== -->
+  <section class="contact">
+    <div class="contact__intro">
+      <p class="contact__intro-text">The page ends and the conversation starts here.</p>
+    </div>
+
+    <div class="contact__content">
+      <p class="contact__text">I am <strong><em>Paul Frost.</em></strong> Based in Malmö. If you have a story worth telling, a brand worth building, or just really good office snacks, let's talk.</p>
+      <hr class="contact__divider">
+      <p class="contact__email"><strong>Email:</strong> <a href="mailto:paul@roamer.se">paul@roamer.se</a></p>
+      <div class="contact__socials">
+        <a href="https://www.linkedin.com/in/paulfrostt/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="../images/linkedin.svg" alt="LinkedIn" width="16" height="16">
+        </a>
+        <a href="https://www.instagram.com/paulfrostt" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="../images/instagram.svg" alt="Instagram" width="16" height="16">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      /* ---- Video data ---- */
+      var videos = [
+        {
+          vimeoId: '1036336300',
+          vimeoHash: 'h=94885f4472',
+          title: 'I Cycle, I Feel the Cold, But I\'ll Be Better Soon',
+          channel: 'Urban Mobility Explained',
+          subs: '68.5K subscribers',
+          location: 'Falun, Sweden',
+          views: '51K views',
+          date: 'Feb 2025',
+          tags: '#Cinematography  #Director  #Editor  #Color Grading  #Sound Design  #Interviews',
+          description: 'A personal portrait of Veronica and what her daily bike commute through a cold Swedish city actually feels like. Not a policy film. A human one.',
+          challenge: 'Make a film about urban cycling that does not start with infrastructure stats or city planning jargon. Make people feel what it is like to get on a bike when it is freezing outside and still choose to ride.',
+          approach: 'Followed Veronica through her morning routine and daily commute in Falun. No narration. No expert explaining why cycling matters. Just one person, the cold, and the quiet reward of arriving somewhere under your own power.',
+          impact: '51K views. By far one of the most watched UMX films. Proved that the most effective way to promote cycling is not to promote it at all. Just show someone who loves it.'
+        },
+        {
+          vimeoId: '1171710702',
+          vimeoHash: 'h=9d2c0cf443',
+          title: 'How Did Umeå Become a Model City for Women?',
+          channel: 'Urban Mobility Explained',
+          subs: '68.5K subscribers',
+          location: 'Umeå, Sweden',
+          views: '1,238 views',
+          date: 'Feb 2026',
+          tags: '#Cinematography  #Director  #Editor  #Color Grading  #Sound Design  #Interviews',
+          description: 'A documentary exploring how one Swedish city redesigned its transport systems around the mobility patterns of women and gender-diverse people, and what other cities can learn from it.',
+          challenge: 'Make a film about gender-inclusive urban planning that does not feel like a lecture. The topic is policy-heavy and easy to make abstract. The job was to make it feel urgent and personal.',
+          approach: 'Built the story around Julia Nyberg from Trivector Mobility. One expert, one city, one clear question: what happens when you design transport around everyone, not just the default? Shot on location in Umeå. Let the city itself show the answer.',
+          impact: 'Part of EIT Urban Mobility\'s free online course on gender-equal mobility. Over 1.2K views and growing. Turned a complex systemic issue into something people actually watched, shared, and discussed in the comments.'
+        },
+        {
+          vimeoId: '972536823',
+          vimeoHash: 'h=2d5d3b7014',
+          title: 'Can You Really Bike to Work in Extreme Winter Conditions?',
+          channel: 'Urban Mobility Explained',
+          subs: '68.5K subscribers',
+          location: 'Luleå, Sweden',
+          views: '3.3K views',
+          date: 'Dec 2025',
+          tags: '#Cinematography  #Director  #Editor  #Color Grading  #Sound Design',
+          description: 'A film about what happens when you choose a bike over a car in a city where winter hits minus forty. Shot in Luleå, Sweden, where cyclists still beat traffic through the snow.',
+          challenge: 'Everyone assumes cycling stops when winter starts. Make a film that challenges that assumption without sounding like a public service announcement. In a city where minus forty is not a headline, it is a Tuesday.',
+          approach: 'Shot in Luleå during peak winter. Real commuters, real conditions, real roads. Let the snow and the cold be the co-stars. No sugarcoating the challenge but showing that the infrastructure works when cities commit to it.',
+          impact: '3.3K views. Part of EIT Urban Mobility\'s free online course on cycling insights from Europe. Made the case that extreme weather is not the enemy of cycling. Bad planning is.'
+        },
+        {
+          vimeoId: '991054909',
+          vimeoHash: 'h=fdd0f209cf',
+          title: 'How Can Urban Transport Work in Extreme Winter Conditions?',
+          channel: 'Urban Mobility Explained',
+          subs: '68.5K subscribers',
+          location: 'Luleå, Sweden',
+          views: '30.5K views',
+          date: 'Jan 2025',
+          tags: '#Cinematography  #Director  #Editor  #Color Grading  #Sound Design  #Scriptwriting  #Interviews',
+          description: 'A documentary following residents of Luleå, Sweden through their daily commutes at minus thirty. Snow, ice, darkness, and the infrastructure decisions that keep a city moving when everything says it should stop.',
+          challenge: 'Make urban transport planning feel like something you experience, not something you read about in a policy brief. Show what minus thirty actually does to a city and the people trying to move through it.',
+          approach: 'Filmed with Ida Persson, Ulf Nordin, and Kristina Zetterström in Luleå during deep winter. Three perspectives, one city. Wrote, shot, and edited the entire piece. Let the darkness and the cold set the tone instead of narration explaining why it matters.',
+          impact: '30.5K views. One of the highest performing UMX videos. Part of EIT Urban Mobility\'s free online course on Sustainable Urban Mobility Plans. Proved that the best way to explain city planning is to show what happens when it works and when it does not.'
+        },
+        {
+          vimeoId: '1039835951',
+          vimeoHash: 'h=140ed8bca3',
+          title: 'Why Do You Walk?',
+          channel: 'Urban Mobility Explained',
+          subs: '68.5K subscribers',
+          location: 'Falun, Sweden',
+          views: '4.6K views',
+          date: 'Nov 2025',
+          tags: '#Cinematography  #Director  #Editor  #Color Grading  #Sound Design  #Scriptwriting  #Interviews',
+          description: 'A personal portrait of Daniela and what walking through snowy Falun means to her. Not about infrastructure. About the feeling of moving through a city on your own feet.',
+          challenge: 'Walking is the most basic form of mobility. It is also the hardest to make a film about. No speed, no drama, no technology. The job was to make something as simple as putting one foot in front of the other feel worth watching.',
+          approach: 'Followed Daniela Söderlund through her daily walks in Falun. One person, one city, snow underfoot. Let the pace of the film match the pace of walking. No rush. No argument. Just a quiet case for the most overlooked form of transport.',
+          impact: '4.6K views. Part of EIT Urban Mobility\'s free online course on designing walkable cities. Made walking feel like a choice worth celebrating instead of a last resort.'
+        }
+      ];
+
+      var ALL_CLASSES = ['is-far-left', 'is-prev', 'is-active', 'is-next', 'is-far-right'];
+      var currentIndex = 0;
+      var isAnimating = false;
+      var slideEls = Array.prototype.slice.call(document.querySelectorAll('.slider__slide'));
+      var infoEl = document.getElementById('sliderInfo');
+      var descEl = document.getElementById('sliderDesc');
+      var total = videos.length;
+
+      function mod(n, m) { return ((n % m) + m) % m; }
+
+      function updatePositions(newIndex, direction) {
+        var positions = {};
+        positions[mod(newIndex - 2, total)] = 'is-far-left';
+        positions[mod(newIndex - 1, total)] = 'is-prev';
+        positions[newIndex]                 = 'is-active';
+        positions[mod(newIndex + 1, total)] = 'is-next';
+        positions[mod(newIndex + 2, total)] = 'is-far-right';
+
+        /* The wrapping slide jumps across — disable its transition */
+        var wrappingIdx = -1;
+        if (direction === 'next') {
+          wrappingIdx = mod(newIndex + 2, total);  /* was far-left, now far-right */
+        } else if (direction === 'prev') {
+          wrappingIdx = mod(newIndex - 2, total);  /* was far-right, now far-left */
+        }
+
+        if (wrappingIdx >= 0) {
+          slideEls[wrappingIdx].style.transition = 'none';
+        }
+
+        /* Remove all position classes, then apply new ones */
+        slideEls.forEach(function (el) {
+          el.classList.remove('is-far-left', 'is-prev', 'is-active', 'is-next', 'is-far-right');
+        });
+        Object.keys(positions).forEach(function (idx) {
+          slideEls[parseInt(idx, 10)].classList.add(positions[idx]);
+        });
+
+        /* Force reflow then restore transition on wrapping slide */
+        if (wrappingIdx >= 0) {
+          slideEls[wrappingIdx].offsetHeight; /* force reflow */
+          requestAnimationFrame(function () {
+            slideEls[wrappingIdx].style.transition = '';
+          });
+        }
+      }
+
+      var typeTimer = null;
+      function typeTitle(el, text) {
+        if (typeTimer) clearInterval(typeTimer);
+        el.textContent = '';
+        el.classList.add('is-typing');
+        var i = 0;
+        typeTimer = setInterval(function () {
+          if (i < text.length) {
+            el.textContent += text[i];
+            i++;
+          } else {
+            clearInterval(typeTimer);
+            typeTimer = null;
+            el.classList.remove('is-typing');
+          }
+        }, 30);
+      }
+
+      function updateContent() {
+        var s = videos[currentIndex];
+        infoEl.innerHTML =
+          '<div class="slider__info-left">' +
+            '<h2 class="slider__title"></h2>' +
+            '<div class="slider__channel">' +
+              '<img src="images/umx-logo.jpg" alt="UMX" class="slider__channel-avatar">' +
+              '<div>' +
+                '<span class="slider__channel-name">' + s.channel + '</span>' +
+                '<span class="slider__channel-subs">' + s.subs + '</span>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="slider__info-right">' +
+            '<span class="slider__location">' + s.location + '</span>' +
+            '<span class="slider__meta">' + s.views + ' | ' + s.date + '</span>' +
+          '</div>';
+
+        var titleEl = infoEl.querySelector('.slider__title');
+        typeTitle(titleEl, s.title);
+
+        /* Fade in info (except title) */
+        gsap.fromTo(infoEl.querySelector('.slider__channel'), { opacity: 0 }, { opacity: 1, duration: 0.5, delay: 0.1 });
+        gsap.fromTo(infoEl.querySelector('.slider__info-right'), { opacity: 0 }, { opacity: 1, duration: 0.5, delay: 0.15 });
+
+        descEl.innerHTML =
+          '<div class="slider__tags">' + s.tags + '</div>' +
+          '<p class="slider__desc-text">' + s.description + '</p>' +
+          '<div class="slider__details">' +
+            '<div><strong class="slider__detail-label">Challenge</strong><p class="slider__detail-text">' + s.challenge + '</p></div>' +
+            '<div><strong class="slider__detail-label">Approach</strong><p class="slider__detail-text">' + s.approach + '</p></div>' +
+            '<div><strong class="slider__detail-label">Impact</strong><p class="slider__detail-text">' + s.impact + '</p></div>' +
+          '</div>';
+
+        /* Fade in desc */
+        gsap.fromTo(descEl, { opacity: 0 }, { opacity: 1, duration: 0.5, delay: 0.2 });
+      }
+
+      function destroyIframes() {
+        for (var i = 0; i < slideEls.length; i++) {
+          var iframe = slideEls[i].querySelector('iframe');
+          if (iframe) iframe.remove();
+          slideEls[i].classList.remove('is-playing');
+          var img = slideEls[i].querySelector('img');
+          if (img) img.style.display = '';
+        }
+      }
+
+      function goTo(index, direction) {
+        var newIndex = mod(index, total);
+        if (isAnimating || newIndex === currentIndex) return;
+        if (!direction) {
+          /* Determine shortest direction */
+          var diff = mod(newIndex - currentIndex, total);
+          direction = (diff <= Math.floor(total / 2)) ? 'next' : 'prev';
+        }
+        isAnimating = true;
+        destroyIframes();
+        currentIndex = newIndex;
+        updatePositions(newIndex, direction);
+        updateContent();
+        setTimeout(function () { isAnimating = false; }, 600);
+        resetTimer();
+      }
+
+      /* Click side slides to navigate */
+      slideEls.forEach(function (el) {
+        el.addEventListener('click', function () {
+          if (el.classList.contains('is-prev')) goTo(currentIndex - 1, 'prev');
+          else if (el.classList.contains('is-next')) goTo(currentIndex + 1, 'next');
+        });
+      });
+
+      /* Play button — embed Vimeo iframe */
+      var playBtns = document.querySelectorAll('.slider__play');
+      for (var j = 0; j < playBtns.length; j++) {
+        (function (btn, idx) {
+          btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            if (idx !== currentIndex) return;
+            var s = videos[idx];
+            if (!s.vimeoId) return;
+            var thumb = slideEls[idx].querySelector('.slider__thumb');
+            var img = thumb.querySelector('img');
+            img.style.display = 'none';
+            slideEls[idx].classList.add('is-playing');
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://player.vimeo.com/video/' + s.vimeoId + '?' + (s.vimeoHash ? s.vimeoHash + '&' : '') + 'autoplay=1&title=0&byline=0&portrait=0';
+            iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+            iframe.setAttribute('allowfullscreen', '');
+            thumb.appendChild(iframe);
+          });
+        })(playBtns[j], j);
+      }
+
+      /* Keyboard navigation — wraps */
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') goTo(currentIndex - 1, 'prev');
+        if (e.key === 'ArrowRight') goTo(currentIndex + 1, 'next');
+      });
+
+      /* Touch / swipe — wraps */
+      var touchStartX = 0;
+      var sliderSection = document.querySelector('.slider');
+      sliderSection.addEventListener('touchstart', function (e) {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      sliderSection.addEventListener('touchend', function (e) {
+        var diff = touchStartX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) goTo(currentIndex + 1, 'next');
+          else goTo(currentIndex - 1, 'prev');
+        }
+      }, { passive: true });
+
+      /* Auto-advance timer */
+      var autoTimer = setInterval(function () {
+        goTo(currentIndex + 1, 'next');
+      }, 7000);
+
+      function resetTimer() {
+        clearInterval(autoTimer);
+        autoTimer = setInterval(function () {
+          goTo(currentIndex + 1, 'next');
+        }, 7000);
+      }
+
+      /* Scroll reveal for slider elements */
+      var revealEls = document.querySelectorAll('.slider__stage, .slider__info, .slider__desc');
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      revealEls.forEach(function (el) { revealObserver.observe(el); });
+
+      /* Init */
+      updateContent();
+    })();
+  </script>
+
+  <script>
+    (function () {
+      if (window.innerWidth <= 767) return;
+
+      /* --- Autoplay videos --- */
+      var videos = document.querySelectorAll('.hero__float video');
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) entry.target.play();
+          else entry.target.pause();
+        });
+      }, { threshold: 0.25 });
+      videos.forEach(function (v) { observer.observe(v); });
+
+      /* --- Mouse + scroll parallax --- */
+      var floats = document.querySelectorAll('.hero__float');
+      var mouseDepths = [0.03, 0.05, 0.04, 0.06, 0.035];
+      var scrollDepths = [0.15, 0.25, 0.2, 0.3, 0.12];
+      var hero = document.querySelector('.hero');
+      var mx = 0, my = 0, cx = 0, cy = 0;
+
+      hero.addEventListener('mousemove', function (e) {
+        var rect = hero.getBoundingClientRect();
+        mx = (e.clientX - rect.left) / rect.width - 0.5;
+        my = (e.clientY - rect.top) / rect.height - 0.5;
+      });
+
+      hero.addEventListener('mouseleave', function () {
+        mx = 0;
+        my = 0;
+      });
+
+      (function tick() {
+        cx += (mx - cx) * 0.08;
+        cy += (my - cy) * 0.08;
+        var scrollY = window.scrollY;
+        floats.forEach(function (el, i) {
+          var md = mouseDepths[i] || 0.04;
+          var x = cx * md * 1000;
+          var y = cy * md * 1000 + scrollY * (scrollDepths[i] || -0.15);
+          el.style.transform = 'translate(' + x.toFixed(1) + 'px, ' + y.toFixed(1) + 'px)';
+        });
+        requestAnimationFrame(tick);
+      })();
+    })();
+  </script>
+  <script>
+    (function () {
+      var hamburger = document.getElementById('hamburger');
+      var nav = document.getElementById('siteNav');
+      if (hamburger && nav) {
+        hamburger.addEventListener('click', function () {
+          hamburger.classList.toggle('is-open');
+          nav.classList.toggle('is-open');
+        });
+        nav.querySelectorAll('.site-nav__link').forEach(function (link) {
+          link.addEventListener('click', function () {
+            hamburger.classList.remove('is-open');
+            nav.classList.remove('is-open');
+          });
+        });
+      }
+    })();
+  </script>
+  <script>
+    var lenis = new Lenis({ duration: 1.2, easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); } });
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+  </script>
+</body>
+</html>
