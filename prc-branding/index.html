@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Early mouse/pointer tracker — must be before all other scripts -->
+  <script>
+    window.__mouseX = 0;
+    window.__mouseY = 0;
+    window.__mouseActive = false;
+    function __onPointer(e) {
+      window.__mouseActive = true;
+      window.__mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+      window.__mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+    }
+    document.addEventListener('mousemove', __onPointer, true);
+    document.addEventListener('pointermove', __onPointer, true);
+  </script>
+
+  <title>Application — PRC Branding | Paul Frost</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Application — PRC Branding | Paul Frost">
+  <meta property="og:description" content="Content & Brand Developer — A personal application for PRC Branding.">
+  <meta property="og:image" content="https://roamer.se/prc-branding/images/og-image.png">
+  <meta property="og:url" content="https://roamer.se/prc-branding/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Application — PRC Branding | Paul Frost">
+  <meta name="twitter:description" content="Content & Brand Developer — A personal application for PRC Branding.">
+  <meta name="twitter:image" content="https://roamer.se/prc-branding/images/og-image.png">
+
+  <!-- Block indexing -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <!-- Preload fonts to prevent layout shift -->
+  <link rel="preload" href="fonts/IvyPrestoHeadline-SemiBold.otf" as="font" type="font/opentype" crossorigin>
+  <link rel="preload" href="fonts/IvyPrestoHeadline-Regular.otf" as="font" type="font/opentype" crossorigin>
+  <link rel="preload" href="fonts/IvyPrestoHeadline-LightItalic.otf" as="font" type="font/opentype" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/nys7xhm.css">
+
+  <!-- Prevent browser scroll restoration (must be in <head> for earliest execution) -->
+  <script>if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
+
+  <!-- Three.js import map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="apply.css">
+
+  <!-- Favicon (reuse site favicon) -->
+  <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MMM3S6R1P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-0MMM3S6R1P');
+  </script>
+</head>
+<body>
+  <div class="grain-overlay"></div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <a href="https://roamer.se" class="hero__logo">
+    <img src="images/paulfrost-logo.svg" alt="Paul Frost">
+  </a>
+  <nav class="site-nav" id="siteNav" data-section="hero">
+    <div class="hero__top-center">
+      <div class="hero__greeting hero-fade-simple" style="--fade-delay: 0s">
+        <span data-config="greeting-before">hello</span>
+        <img src="images/axis-logo.png" alt="Axis Communications" data-config-logo>
+        <span data-config="greeting-after">team!</span>
+      </div>
+    </div>
+  </nav>
+
+  <p class="hero__tagline hero-fade-simple" style="--fade-delay: 0.1s" data-config="hero-tagline">I made you a website because PDFs never did justice to anyone.</p>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero section--cream" data-section="hero">
+    <div class="hero__bust" id="heroBust"></div>
+
+    <div class="hero__main">
+      <h1 class="hero__heading hero-fade" style="--fade-delay: 0.2s" data-config="hero-heading">A <em class="hero__heading-italic">brand builder</em> for the agency that makes brands worth remembering.</h1>
+      <p class="hero__subtitle hero-fade" style="--fade-delay: 0.3s" data-config="hero-subtitle">This is my unusual application and I am your next art director.</p>
+      <p class="hero__subtitle-emphasis hero-fade" style="--fade-delay: 0.4s">And here is why;</p>
+    </div>
+  </section>
+
+  <!-- ==================== WHY AXIS ==================== -->
+  <section id="why-axis" class="section section--cream section-about" data-section="whyAxis">
+    <div class="container">
+      <p class="about-intro reveal" data-config="about-intro">Before anything else, let me prove I actually understand what you do.</p>
+
+      <div class="text-reveal" id="textReveal">
+        <div class="about-columns">
+          <p class="about-column" data-config="about-col-1">You are not a branding agency. You are the bridge between a big strategic idea and the thing that actually ends up in the customer's hand. Packaging, instore, campaigns, film. From concept to shelf. That is a different skill set than most agencies have.</p>
+          <p class="about-column" data-config="about-col-2">But quality at that range requires someone who is as comfortable in Adobe as they are in a client meeting. Someone who understands print production, knows what works on a shelf, and does not need to be told twice.</p>
+        </div>
+
+        <p class="about-outro" data-config="about-outro">That is exactly the kind of work I have been doing. And I brought the proof.</p>
+        <div class="about-line" id="aboutLine"></div>
+        <div class="about-vline" id="aboutVLine"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CLIENT LOGOS ==================== -->
+  <section id="clients" class="clients-section section section--cream" data-section="clients">
+    <p class="clients-intro reveal" data-config="clients-intro">Now let's talk about me. But briefly, I promise.</p>
+
+    <div class="clients-grid">
+      <!-- Left marquee — scrolls up -->
+      <div class="marquee-col marquee-col--up">
+        <div class="marquee-track">
+          <div class="marquee-list">
+            <img src="images/logos/business-insider.png" alt="Business Insider">
+            <img src="images/logos/canon.png" alt="Canon">
+            <img src="images/logos/dell.png" alt="Dell">
+            <img src="images/logos/eit.png" alt="EIT">
+            <img src="images/logos/globhe.png" alt="Globhe">
+            <img src="images/logos/channel5.png" alt="Channel 5">
+            <img src="images/logos/adidem.png" alt="Adidem">
+          </div>
+          <div class="marquee-list" aria-hidden="true">
+            <img src="images/logos/business-insider.png" alt="">
+            <img src="images/logos/canon.png" alt="">
+            <img src="images/logos/dell.png" alt="">
+            <img src="images/logos/eit.png" alt="">
+            <img src="images/logos/globhe.png" alt="">
+            <img src="images/logos/channel5.png" alt="">
+            <img src="images/logos/adidem.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- Center text -->
+      <div class="clients-center">
+        <h2 class="clients-heading reveal" data-config="clients-heading">More than a decade. Clients from five continents. And some familiar names along the way.</h2>
+      </div>
+
+      <!-- Right marquee — scrolls down -->
+      <div class="marquee-col marquee-col--down">
+        <div class="marquee-track">
+          <div class="marquee-list">
+            <img src="images/logos/business-insider.png" alt="Business Insider">
+            <img src="images/logos/canon.png" alt="Canon">
+            <img src="images/logos/dell.png" alt="Dell">
+            <img src="images/logos/eit.png" alt="EIT">
+            <img src="images/logos/globhe.png" alt="Globhe">
+            <img src="images/logos/channel5.png" alt="Channel 5">
+            <img src="images/logos/adidem.png" alt="Adidem">
+          </div>
+          <div class="marquee-list" aria-hidden="true">
+            <img src="images/logos/business-insider.png" alt="">
+            <img src="images/logos/canon.png" alt="">
+            <img src="images/logos/dell.png" alt="">
+            <img src="images/logos/eit.png" alt="">
+            <img src="images/logos/globhe.png" alt="">
+            <img src="images/logos/channel5.png" alt="">
+            <img src="images/logos/adidem.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="clients-outro" id="clientsOutro" data-config="clients-outro">Apart from a quote, they all asked for the same thing:</p>
+
+  </section>
+
+  <!-- ==================== VIDEO SHOWCASE ==================== -->
+  <section class="section section--cream video-section" id="videoSection" data-section="video">
+    <div class="video-section__content">
+      <div class="video-section__intro">
+        <h2 class="video-section__heading" data-config="video-heading">...make the design do the selling before anyone opens their <span class="heading-italic">mouth.</span></h2>
+        <p class="video-section__sub" data-config="video-sub">Here is what that looks like in action:</p>
+      </div>
+
+      <div class="box-showcase" id="boxShowcase">
+        <div class="solution__box">
+          <img class="solution__box-open" src="images/box-open.png" alt="Open box">
+          <img class="solution__box-closed" src="images/box-closed.png" alt="Closed box">
+        </div>
+      </div>
+
+      <div class="video-section__footer">
+        <h3 class="video-section__text" id="videoText1" data-config="video-text1">This is what I bring to PRC. Every brand. Every touchpoint. Every time.</h3>
+      </div>
+    </div>
+    <p class="video-outro" id="videoOutro" data-config="video-outro">But did you also know that I'm really good with?</p>
+  </section>
+
+  <!-- ==================== SKILLS ==================== -->
+  <section class="skills-section section--dark" id="skillsSection" data-section="skills">
+    <div class="skills-box">
+      <div class="skills-list" data-config-skills>
+        <div class="skills-item">
+          <span class="skills-item__num">(001)</span>
+          <span class="skills-item__word">Art Direction</span>
+          <span class="skills-item__desc">My main tool. A strong eye, a clean file, and the ability to make a carrier bag look like it belongs in a gallery. Somehow.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(002)</span>
+          <span class="skills-item__word">Adobe</span>
+          <span class="skills-item__desc">Illustrator, Photoshop, InDesign, Premiere. Practically my second native language. The shortcuts are muscle memory at this point.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(003)</span>
+          <span class="skills-item__word">Print</span>
+          <span class="skills-item__desc">Bleed, CMYK, die lines, supplier briefs. I do not just design for print. I understand what survives it. Eight countries of packaging will do that to you.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(004)</span>
+          <span class="skills-item__word">Branding</span>
+          <span class="skills-item__desc">Brand identity, visual systems, guidelines. Making a brand look the same on a shelf in Copenhagen and a shelf in Seoul is not a problem. It is the fun part.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(005)</span>
+          <span class="skills-item__word">Social Media</span>
+          <span class="skills-item__desc">Instagram, LinkedIn, content planning, campaign execution. I do not just make individual posts look good. I make the whole feed feel intentional.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(006)</span>
+          <span class="skills-item__word">AI Tools</span>
+          <span class="skills-item__desc">Claude, ChatGPT, Adobe Generative AI. I use them to move faster without losing the craft. The output still has to be right. That part is still on me.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(007)</span>
+          <span class="skills-item__word">Video</span>
+          <span class="skills-item__desc">Scripts, cinema cameras, DaVinci Resolve, Adobe Creative Cloud. When the brief calls for motion, I press record. This website you are scrolling right now? I made that too.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(008)</span>
+          <span class="skills-item__word">Project</span>
+          <span class="skills-item__desc">Briefs, timelines, supplier coordination, client contact. I keep things moving without making it feel like a project management course.</span>
+        </div>
+      </div>
+
+      <div class="skills-outro">
+        <p class="skills-outro__text" data-config="skills-outro">"Cool skills Paul, but what would you actually do here?" Great question. Keep scrolling.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FRAMEWORK ==================== -->
+  <section class="proof-section section--cream" id="proofSection" data-section="proof">
+    <div class="proof-box" id="proofBox">
+      <div class="proof-content">
+        <div class="proof-left">
+          <p data-config="proof-left">You need someone who can handle the creative and the practical without treating them as separate jobs. That is not just an AD. That is a system. And I love systems.</p>
+        </div>
+        <div class="proof-right" data-config-proof-steps>
+          <div class="proof-step">
+            <h3 class="proof-step__title">
+              <span class="proof-step__title-mask">
+                <span class="proof-step__title-slide">
+                  <span class="proof-step__title-text" data-config="proof-step-1-title">01 / The Brief</span>
+                  <span class="proof-step__title-text" data-config-title-dup="proof-step-1-title">01 / The Brief</span>
+                </span>
+              </span>
+            </h3>
+            <div class="proof-step__line"></div>
+            <p class="proof-step__desc" data-config="proof-step-1-desc">Every good piece of work starts with understanding what the client actually needs. Not what they asked for. What they need. That is the conversation I have before I open Illustrator.</p>
+          </div>
+          <div class="proof-step">
+            <h3 class="proof-step__title">
+              <span class="proof-step__title-mask">
+                <span class="proof-step__title-slide">
+                  <span class="proof-step__title-text" data-config="proof-step-2-title">02 / The Concept</span>
+                  <span class="proof-step__title-text" data-config-title-dup="proof-step-2-title">02 / The Concept</span>
+                </span>
+              </span>
+            </h3>
+            <div class="proof-step__line"></div>
+            <p class="proof-step__desc" data-config="proof-step-2-desc">The idea has to work before it gets beautiful. I think through function, shelf presence, and brand consistency before I think about aesthetics. Then I make it look exactly right.</p>
+          </div>
+          <div class="proof-step">
+            <h3 class="proof-step__title">
+              <span class="proof-step__title-mask">
+                <span class="proof-step__title-slide">
+                  <span class="proof-step__title-text" data-config="proof-step-3-title">03 / The Execution</span>
+                  <span class="proof-step__title-text" data-config-title-dup="proof-step-3-title">03 / The Execution</span>
+                </span>
+              </span>
+            </h3>
+            <div class="proof-step__line"></div>
+            <p class="proof-step__desc" data-config="proof-step-3-desc">From the first sketch to the final print file. I stay in the process until it is right. Not almost right. Right.</p>
+          </div>
+          <div class="proof-step">
+            <h3 class="proof-step__title">
+              <span class="proof-step__title-mask">
+                <span class="proof-step__title-slide">
+                  <span class="proof-step__title-text" data-config="proof-step-4-title">04 / The System</span>
+                  <span class="proof-step__title-text" data-config-title-dup="proof-step-4-title">04 / The System</span>
+                </span>
+              </span>
+            </h3>
+            <div class="proof-step__line"></div>
+            <p class="proof-step__desc" data-config="proof-step-4-desc">Then I make sure it can happen again without starting from scratch. Every project leaves the brand in better shape than it found it.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="proof-closing" id="proofClosing" data-config="proof-closing">If you have scrolled this far, I think we both know what comes next.</p>
+    </div>
+  </section>
+
+  <!-- ==================== CTA / CLOSING ==================== -->
+  <section class="closing-section section--cream" id="closingSection" data-section="closing">
+    <div class="closing-content">
+      <h2 class="closing-heading" data-config="closing-heading">I am <span class="closing-name">Paul Frost</span>. Based in Malmö. I have worked in big structures and small ones. The small ones always win. Faster decisions, real ownership, work you can actually put your name on.</h2>
+      <p class="closing-sub" data-config="closing-sub">Let's grab a fika and talk about it.</p>
+      <div class="closing-line"></div>
+      <div class="closing-contacts">
+        <span><strong>Email:</strong> <a href="mailto:paul@roamer.se" data-config="contact-email">paul@roamer.se</a></span>
+        <span><strong>Phone:</strong> <a href="tel:+46764510037" data-config="contact-phone">+46 764 51 0037</a></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="page-config.js"></script>
+  <script src="apply.js"></script>
+  <script type="module" src="bust.js"></script>
+</body>
+</html>
