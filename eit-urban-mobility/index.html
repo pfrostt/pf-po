@@ -421,15 +421,22 @@
         }
       }, { passive: true });
 
-      /* Auto-advance timer */
+      /* Auto-advance timer — pauses while a video is playing */
+      function isVideoPlaying() {
+        for (var i = 0; i < slideEls.length; i++) {
+          if (slideEls[i].classList.contains('is-playing')) return true;
+        }
+        return false;
+      }
+
       var autoTimer = setInterval(function () {
-        goTo(currentIndex + 1, 'next');
+        if (!isVideoPlaying()) goTo(currentIndex + 1, 'next');
       }, 7000);
 
       function resetTimer() {
         clearInterval(autoTimer);
         autoTimer = setInterval(function () {
-          goTo(currentIndex + 1, 'next');
+          if (!isVideoPlaying()) goTo(currentIndex + 1, 'next');
         }, 7000);
       }
 
@@ -451,35 +458,41 @@
 
   <script>
     (function () {
-      if (window.innerWidth <= 767) return;
-
-      /* --- Autoplay videos --- */
-      var videos = document.querySelectorAll('.hero__float video');
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) entry.target.play();
-          else entry.target.pause();
-        });
-      }, { threshold: 0.25 });
-      videos.forEach(function (v) { observer.observe(v); });
-
-      /* --- Mouse + scroll parallax --- */
+      var isMobile = window.innerWidth <= 767;
       var floats = document.querySelectorAll('.hero__float');
-      var mouseDepths = [0.03, 0.05, 0.04, 0.06, 0.035];
-      var scrollDepths = [0.15, 0.25, 0.2, 0.3, 0.12];
+
+      if (!isMobile) {
+        /* --- Autoplay videos (desktop only) --- */
+        var videos = document.querySelectorAll('.hero__float video');
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.play();
+            else entry.target.pause();
+          });
+        }, { threshold: 0.25 });
+        videos.forEach(function (v) { observer.observe(v); });
+      }
+
+      /* --- Parallax --- */
       var hero = document.querySelector('.hero');
+      var mouseDepths = [0.03, 0.05, 0.04, 0.06, 0.035];
+      var scrollDepths = isMobile
+        ? [0.04, 0.06, 0.05, 0.07, 0.03]
+        : [0.15, 0.25, 0.2, 0.3, 0.12];
       var mx = 0, my = 0, cx = 0, cy = 0;
 
-      hero.addEventListener('mousemove', function (e) {
-        var rect = hero.getBoundingClientRect();
-        mx = (e.clientX - rect.left) / rect.width - 0.5;
-        my = (e.clientY - rect.top) / rect.height - 0.5;
-      });
+      if (!isMobile) {
+        hero.addEventListener('mousemove', function (e) {
+          var rect = hero.getBoundingClientRect();
+          mx = (e.clientX - rect.left) / rect.width - 0.5;
+          my = (e.clientY - rect.top) / rect.height - 0.5;
+        });
 
-      hero.addEventListener('mouseleave', function () {
-        mx = 0;
-        my = 0;
-      });
+        hero.addEventListener('mouseleave', function () {
+          mx = 0;
+          my = 0;
+        });
+      }
 
       (function tick() {
         cx += (mx - cx) * 0.08;
@@ -487,8 +500,8 @@
         var scrollY = window.scrollY;
         floats.forEach(function (el, i) {
           var md = mouseDepths[i] || 0.04;
-          var x = cx * md * 1000;
-          var y = cy * md * 1000 + scrollY * (scrollDepths[i] || -0.15);
+          var x = isMobile ? 0 : cx * md * 1000;
+          var y = (isMobile ? 0 : cy * md * 1000) + scrollY * (scrollDepths[i] || 0.05);
           el.style.transform = 'translate(' + x.toFixed(1) + 'px, ' + y.toFixed(1) + 'px)';
         });
         requestAnimationFrame(tick);

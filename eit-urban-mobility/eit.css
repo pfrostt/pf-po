@@ -641,11 +641,11 @@ body {
     background-position: center;
   }
 
-  .hero__float--1 { width: 110px; background-image: url('videos/poster-1.jpg'); top: 8%; left: auto; right: 5%; }
-  .hero__float--2 { width: 85px; background-image: url('videos/poster-2.jpg'); top: 28%; left: 5%; }
-  .hero__float--3 { width: 100px; background-image: url('videos/poster-3.jpg'); top: 48%; right: 3%; left: auto; }
-  .hero__float--4 { width: 80px; background-image: url('videos/poster-4.jpg'); top: 68%; left: 50%; }
-  .hero__float--5 { width: 115px; background-image: url('videos/poster-5.jpg'); top: 82%; left: 3%; }
+  .hero__float--1 { width: 110px; background-image: url('videos/poster-1.jpg'); top: 8%; left: auto; right: 5%; opacity: 0.35; }
+  .hero__float--2 { width: 85px; background-image: url('videos/poster-2.jpg'); top: 28%; left: 5%; opacity: 0.35; }
+  .hero__float--3 { width: 100px; background-image: url('videos/poster-3.jpg'); top: 48%; right: 3%; left: auto; opacity: 0.35; }
+  .hero__float--4 { width: 80px; background-image: url('videos/poster-4.jpg'); top: 68%; left: 50%; opacity: 0.35; }
+  .hero__float--5 { width: 115px; background-image: url('videos/poster-5.jpg'); top: 82%; left: 3%; opacity: 0.35; }
 
   .hero__title {
     font-size: 3.2rem;
@@ -674,11 +674,18 @@ body {
   }
 
   .slider__slide.is-prev {
-    transform: translate(calc(-50% - 100vw), -50%) scale(0.88);
+    transform: translate(calc(-50% - 75vw), -50%) scale(0.85);
+    opacity: 0.3;
   }
 
   .slider__slide.is-next {
-    transform: translate(calc(-50% + 100vw), -50%) scale(0.88);
+    transform: translate(calc(-50% + 75vw), -50%) scale(0.85);
+    opacity: 0.3;
+  }
+
+  .slider__slide.is-far-left,
+  .slider__slide.is-far-right {
+    opacity: 0;
   }
 
   .slider__info,
@@ -687,12 +694,41 @@ body {
   }
 
   .slider__info {
-    flex-direction: column;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+  }
+
+  .slider__info-left {
+    display: contents;
+  }
+
+  .slider__title {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    font-size: 15px;
+  }
+
+  .slider__channel {
+    grid-column: 1;
+    grid-row: 2;
   }
 
   .slider__info-right {
-    text-align: left;
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    text-align: right;
+  }
+
+  .slider__location {
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+
+  .slider__meta {
+    font-size: 12px;
   }
 
   .slider__slide.is-active .slider__play {
