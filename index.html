@@ -28,11 +28,157 @@
   <meta property="og:url" content="https://roamer.se/">
   <meta property="og:type" content="website">
 
+  <!-- Open Graph (extended) -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Paul Frost">
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Paul Frost | Brands, Films, and Products That Actually Work">
   <meta name="twitter:description" content="I build brands, tell their stories, and create the films and products that make them real. A creative producer near you.">
   <meta name="twitter:image" content="https://roamer.se/images/opengraph.jpg">
+  <meta name="twitter:site" content="@paulfrostt">
+  <meta name="twitter:creator" content="@paulfrostt">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://roamer.se/">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://roamer.se/#website",
+        "url": "https://roamer.se/",
+        "name": "Paul Frost",
+        "description": "I build brands, tell their stories, and create the films and products that make them real. A creative producer near you."
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://roamer.se/#profilepage",
+        "url": "https://roamer.se/",
+        "name": "Paul Frost | Brands, Films, and Products That Actually Work",
+        "isPartOf": { "@id": "https://roamer.se/#website" },
+        "mainEntity": { "@id": "https://roamer.se/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://roamer.se/#person",
+        "name": "Paul Frost",
+        "url": "https://roamer.se/",
+        "image": "https://roamer.se/images/portrait.jpg",
+        "jobTitle": "Creative Producer",
+        "description": "Creative producer specializing in brand identity, cinematography, and product development. Based in Malmö, Sweden with over a decade of experience across five continents.",
+        "email": "paul@roamer.se",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Malmö",
+          "addressCountry": "SE"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/paulfrostt/",
+          "https://www.instagram.com/paulfrostt"
+        ],
+        "knowsAbout": [
+          "Brand Identity",
+          "Art Direction",
+          "Cinematography",
+          "Documentary Filmmaking",
+          "Aerial Cinematography",
+          "Packaging Design",
+          "Creative Direction",
+          "Full Stack Development",
+          "SEO Strategy",
+          "E-Commerce",
+          "Color Grading",
+          "Supply Chain Management"
+        ]
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://roamer.se/#work-liberte",
+        "name": "Liberté Coffee",
+        "description": "Cold brew coffee brand built from idea to product in eight countries across four continents. Brand DNA, design leadership, packaging, supply chain, and international distribution.",
+        "creator": { "@id": "https://roamer.se/#person" },
+        "keywords": ["Brand Identity", "Packaging Design", "Supply Chain", "International Distribution", "Sustainability"]
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://roamer.se/#work-eit",
+        "name": "EIT Urban Mobility",
+        "description": "Multiple documentary and narrative films about urban planning and sustainable transport, shot across three countries for EIT Urban Mobility.",
+        "creator": { "@id": "https://roamer.se/#person" },
+        "keywords": ["Documentary Filmmaking", "Cinematography", "Storytelling", "Multi-Country Production"]
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://roamer.se/#work-terralina",
+        "name": "Terralina",
+        "url": "https://terralina.co",
+        "description": "E-commerce brand built from zero audience and zero ad spend to generating sales within the first month through SEO-driven content and AI automation.",
+        "creator": { "@id": "https://roamer.se/#person" },
+        "keywords": ["SEO Strategy", "Brand Creation", "E-Commerce", "Organic Growth", "AI Automation"]
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://roamer.se/#work-fikola",
+        "name": "Fikola",
+        "url": "https://fikola.com",
+        "description": "Bilingual ride-sharing platform built from scratch as a solo developer. Backend, frontend, database, email systems, and deployment.",
+        "creator": { "@id": "https://roamer.se/#person" },
+        "keywords": ["Full Stack Development", "Web Application", "UX Design", "Brand Identity"]
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://roamer.se/#work-business-insider",
+        "name": "Business Insider Documentary",
+        "description": "Documentary shot for Business Insider that reached eight million views. Research, interview sourcing, location scouting, and cinematography across Norway and Nigeria.",
+        "creator": { "@id": "https://roamer.se/#person" },
+        "keywords": ["Documentary Filmmaking", "Cinematography", "Aerial Cinematography", "Pre-Production Research"]
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://roamer.se/#work-you-cannot-hide",
+        "name": "You Cannot Hide",
+        "description": "Cinematic portrait film of glass artist Manon Hillereau on Bornholm. Directed and produced as a customer story approach to brand filmmaking.",
+        "creator": { "@id": "https://roamer.se/#person" },
+        "keywords": ["Director", "Cinematic Storytelling", "Portrait Film", "Brand Storytelling"]
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Martina Bradacova", "jobTitle": "Project and Policy Officer, CPMR" },
+        "itemReviewed": { "@id": "https://roamer.se/#person" },
+        "reviewBody": "Working with you on the Regenera4MED video was a smooth ride. You took a complex multi-country project about regenerative tourism and shaped the script into something clear, engaging, and actually watchable. You do not just tell stories. You make people feel them. We would work with you again without hesitation."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Malaurie Chokoualé Datou", "jobTitle": "Producer, UMX" },
+        "itemReviewed": { "@id": "https://roamer.se/#person" },
+        "reviewBody": "Working with you has been an absolute pleasure. Your dedication and professionalism stand out. You are attentive, easy to work with, and fully committed during shoots. Your artistic touch elevates every project. A fantastic collaborator!"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Fredrik Edström", "jobTitle": "Producer, Ivar Studios" },
+        "itemReviewed": { "@id": "https://roamer.se/#person" },
+        "reviewBody": "You were a fantastic cinematographer on our helicopter shoot around Kebnekaise. Your eye for cinematic shots and calm presence in a high-pressure environment made a huge difference. The footage you captured was stunning and brought our vision to life beautifully."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Sonia Singh", "jobTitle": "Producer, Proudfoot" },
+        "itemReviewed": { "@id": "https://roamer.se/#person" },
+        "reviewBody": "It was a pleasure to work with you. Proudfoot enlisted your help for a drone shoot and we were thrilled with the results. Your work is beautiful and we were very happy with the outcome and the overall experience working together."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Erkan Ozbakir", "jobTitle": "Founder, Terralina" },
+        "itemReviewed": { "@id": "https://roamer.se/#person" },
+        "reviewBody": "You did not just build our brand. You built the entire engine behind it. SEO, content, AI automation, and actual sales with zero ad spend in the first month. I gave you an idea and you gave me back a business."
+      }
+    ]
+  }
+  </script>
 
   <!-- Preload heavy assets -->
   <link rel="preload" href="models/bust.glb" as="fetch" crossorigin>
@@ -192,6 +338,72 @@
       <p class="section-outro__text">I could keep talking. Or you could just look at who already said yes.</p>
     </div>
   </section>
+
+  <!-- Static work cases for AI crawlers (visually hidden, content in DOM) -->
+  <div class="sr-only" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">
+    <article>
+      <h3>Liberté Coffee</h3>
+      <p>Liberté started as an idea and became a cold brew coffee brand in eight countries across four continents. I built the brand DNA, led the design teams, sourced materials, set up production, and handled distribution. Everything recyclable. Everything intentional. Gold foil on raw cardboard because sustainability should not mean looking like you gave up.</p>
+      <ul><li>Brand Identity &amp; DNA</li><li>Art Direction</li><li>Packaging Design</li><li>Supply Chain</li><li>International Distribution</li><li>Sustainability</li><li>Creative Direction</li><li>Team Leadership</li></ul>
+    </article>
+    <article>
+      <h3>EIT Urban Mobility</h3>
+      <p>Can you bike to work when it is minus forty? That is the kind of question I turned into a film people actually wanted to watch. Multiple documentary and narrative projects for EIT Urban Mobility, shot across three countries. Complex problems around urban planning and sustainable transport, told through real people and real stories. Interviews, cinematography, color grading, and storytelling that makes innovation feel human instead of institutional.</p>
+      <ul><li>Documentary Filmmaking</li><li>Storytelling</li><li>Sit Down Interviews</li><li>Cinematography</li><li>Color Grading</li><li>Narrative Film</li><li>Multi-Country Production</li><li>Sustainability Content</li></ul>
+    </article>
+    <article>
+      <h3>Terralina</h3>
+      <p>Terralina started with no audience, no ads, and no budget for either. I built the brand, wrote SEO driven content, built AI automation tools for image generation and content creation, and generated sales within the first month. Zero ad spend. All organic. When your systems do the selling, you do not need a media budget.</p>
+      <ul><li>SEO Strategy</li><li>Brand Creation</li><li>E-Commerce</li><li>Organic Growth</li><li>Copywriting</li><li>Sales Strategy</li><li>Analytics</li><li>AI Automation</li><li>Generative AI</li><li>Content Systems</li></ul>
+    </article>
+    <article>
+      <h3>Fikola</h3>
+      <p>Fikola is a bilingual ride-sharing platform I built from scratch. Not just the brand. The actual product. Backend, frontend, database, email systems, deployment. One person, zero investors, fully functional. Free to use, no ads, no data selling. Just a working platform that solves a real problem.</p>
+      <ul><li>Full Stack Development</li><li>Web Application</li><li>UX Design</li><li>Backend</li><li>Frontend Development</li><li>Database Architecture</li><li>Brand Identity</li><li>Bilingual Platform</li></ul>
+    </article>
+    <article>
+      <h3>Business Insider</h3>
+      <p>Eight million views. That is how many people watched a documentary I shot for Business Insider. I did not just show up with a camera. I researched the subject, found the people worth interviewing, scouted every location, and filmed across Norway and Nigeria while working with a UK based producer. Cinematography and aerial. Pre-production to final delivery.</p>
+      <ul><li>Director of Photography</li><li>Documentary Filmmaking</li><li>Pre-Production Research</li><li>Interview Sourcing</li><li>Location Scouting</li><li>Cinematography</li><li>Aerial Cinematography</li><li>Cross-Border Collaboration</li></ul>
+    </article>
+    <article>
+      <h3>You Cannot Hide</h3>
+      <p>A glass artist on Bornholm, working alone in her studio between silence and heat. No script. No product placement. No voiceover telling you what to feel. Just a real person and the invisible process that shapes her work. I directed and produced "You Cannot Hide," a cinematic portrait of Manon Hillereau. This is the approach that works for customer stories. Follow someone in their world, let the craft speak, and the brand becomes felt instead of forced.</p>
+      <ul><li>Director</li><li>Cinematic Storytelling</li><li>Portrait Film</li><li>Customer Stories</li><li>Narrative Filmmaking</li><li>Cinematography</li><li>Art Direction</li><li>Brand Storytelling</li></ul>
+    </article>
+    <article>
+      <h3>Aerial Cinematography</h3>
+      <p>The difference between a drone operator and an aerial cinematographer is paperwork, planning, and taste. I handle all three. Licensed, regulation-fluent, and experienced in restricted airspace operations across Europe. I do not just fly up and press record. I plan the shot, file the permits, and deliver footage that looks like it belongs on a cinema screen.</p>
+      <ul><li>Licensed Drone Operator</li><li>Aerial Cinematography</li><li>European Drone Regulations</li><li>Airspace Planning</li><li>Flight Permits</li><li>Safety Protocols</li><li>Cinematic Filming</li><li>Production Planning</li></ul>
+    </article>
+  </div>
+
+  <!-- Static client testimonials for AI crawlers (visually hidden, content in DOM) -->
+  <div class="sr-only" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">
+    <section>
+      <h2>Client Testimonials</h2>
+      <blockquote>
+        <p>Working with you on the Regenera4MED video was a smooth ride. You took a complex multi-country project about regenerative tourism and shaped the script into something clear, engaging, and actually watchable. That is harder than it sounds. The footage and music felt like they belonged to the project, not just on top of it. You followed our branding guidelines while still making the final piece feel emotional and authentic. Not everyone can do both. What stays with me most is the feeling the video leaves behind. You do not just tell stories. You make people feel them. We would work with you again without hesitation.</p>
+        <footer><cite>Martina Bradacova, Project and Policy Officer, CPMR</cite></footer>
+      </blockquote>
+      <blockquote>
+        <p>Working with you has been an absolute pleasure. We have collaborated with you on several Urban Mobility Explained YouTube videos in Sweden, and your dedication and professionalism stand out. You are attentive, easy to work with, and fully committed during shoots. You take client feedback seriously and integrate it with great care. We truly appreciate the sensitivity you bring to your work, your passion for beautiful visuals, and your ability to enhance storytelling through sound and music. You are always open to suggesting and experimenting with new formats and ideas, and your artistic touch elevates every project. A fantastic collaborator!</p>
+        <footer><cite>Malaurie Chokoual&#233; Datou, Producer, UMX</cite></footer>
+      </blockquote>
+      <blockquote>
+        <p>You were a fantastic cinematographer on our helicopter shoot around Kebnekaise. Your eye for cinematic shots and calm presence in a high-pressure environment made a huge difference. The footage you captured was stunning and brought our vision to life beautifully.</p>
+        <footer><cite>Fredrik Edstr&#246;m, Producer, Ivar Studios</cite></footer>
+      </blockquote>
+      <blockquote>
+        <p>It was a pleasure to work with you. Proudfoot enlisted your help for a drone shoot and we were thrilled with the results. Your work is beautiful and we were very happy with the outcome and the overall experience working together.</p>
+        <footer><cite>Sonia Singh, Producer, Proudfoot</cite></footer>
+      </blockquote>
+      <blockquote>
+        <p>You did not just build our brand. You built the entire engine behind it. SEO, content, AI automation, and actual sales with zero ad spend in the first month. I gave you an idea and you gave me back a business. The systems you created are still running and still generating results. I do not know many people who can do what you did for Terralina.</p>
+        <footer><cite>Erkan Ozbakir, Founder, Terralina</cite></footer>
+      </blockquote>
+    </section>
+  </div>
 
   <!-- ==================== CLIENTS ==================== -->
   <section class="clients section--cream" data-section="clients">

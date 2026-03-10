@@ -2,7 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://roamer.se/</loc>
-    <lastmod>2026-02-23</lastmod>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://roamer.se/liberte/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://roamer.se/llms.txt</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.30</priority>
   </url>
 </urlset>

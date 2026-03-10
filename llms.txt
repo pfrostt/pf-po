@@ -1,0 +1,55 @@
+# Paul Frost
+
+> Creative producer specializing in brand identity, cinematography, and product development. Based in Malmö, Sweden. Over a decade of experience across five continents.
+
+## About
+
+Paul Frost builds brands, tells their stories, and creates the films and products that make them real. His work spans brand identity design, documentary filmmaking, aerial cinematography, packaging design, full-stack development, and SEO-driven e-commerce. He has worked with clients including Canon, Dell, Business Insider, Dezeen, Patagonia, Triumph Motorcycles, and EIT Urban Mobility.
+
+- [Portfolio](https://roamer.se)
+- [LinkedIn](https://www.linkedin.com/in/paulfrostt/)
+- [Instagram](https://www.instagram.com/paulfrostt)
+- [Email](mailto:paul@roamer.se)
+
+## Services
+
+- Brand Identity & DNA
+- Art Direction & Creative Direction
+- Documentary & Narrative Filmmaking
+- Cinematography & Color Grading
+- Aerial Cinematography (Licensed Drone Operator, European regulations)
+- Packaging Design
+- Supply Chain & International Distribution
+- Full Stack Web Development
+- SEO Strategy & Content Systems
+- E-Commerce & Organic Growth
+- AI Automation & Generative AI
+
+## Selected Work
+
+- [Liberté Coffee](https://roamer.se/#work-liberte): Cold brew coffee brand built from idea to product in eight countries across four continents. Brand DNA, packaging, supply chain, and distribution.
+- [EIT Urban Mobility](https://roamer.se/#work-eit): Multiple documentary and narrative films about urban planning and sustainable transport, shot across three countries.
+- [Terralina](https://terralina.co): E-commerce brand built from zero audience to generating sales within the first month. SEO, AI automation, zero ad spend.
+- [Fikola](https://fikola.com): Bilingual ride-sharing platform built from scratch as a solo developer. Backend, frontend, database, and deployment.
+- [Business Insider Documentary](https://roamer.se/#work-business-insider): Documentary that reached eight million views. Research, interviews, cinematography across Norway and Nigeria.
+- [You Cannot Hide](https://roamer.se/#work-you-cannot-hide): Cinematic portrait film of glass artist Manon Hillereau on Bornholm. Directed and produced.
+- [Aerial Cinematography](https://roamer.se/#work-aerial): Licensed drone operations across Europe. Restricted airspace, permits, and cinematic filming.
+
+## Client Testimonials
+
+- Martina Bradacova (CPMR): "You do not just tell stories. You make people feel them. We would work with you again without hesitation."
+- Malaurie Chokoualé Datou (UMX): "Your dedication and professionalism stand out. Your artistic touch elevates every project. A fantastic collaborator!"
+- Fredrik Edström (Ivar Studios): "A fantastic cinematographer. Your eye for cinematic shots and calm presence in a high-pressure environment made a huge difference."
+- Sonia Singh (Proudfoot): "Your work is beautiful and we were very happy with the outcome and the overall experience working together."
+- Erkan Ozbakir (Terralina): "You did not just build our brand. You built the entire engine behind it. I gave you an idea and you gave me back a business."
+
+## Key Facts
+
+- Based in Malmö, Sweden
+- Over a decade of professional experience
+- Work spans five continents
+- Licensed drone operator (European regulations)
+- Clients include Canon, Dell, Business Insider, Dezeen, Patagonia, Triumph Motorcycles, EIT Urban Mobility
+- 8 million views on Business Insider documentary
+- Proficient in RED cinema cameras, DaVinci Resolve, Premiere Pro, After Effects, Figma
+- Full-stack developer (Next.js, TypeScript, Supabase, Node.js)
