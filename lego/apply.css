@@ -1487,7 +1487,7 @@ section + section {
   left: 0;
   top: 0.55em;
   width: 200px;
-  font-family: 'ivypresto-display', var(--font-serif);
+  font-family: 'IvyPresto Headline', var(--font-serif);
   font-size: 16px;
   font-weight: 500;
   color: var(--color-light);
@@ -1498,7 +1498,7 @@ section + section {
 }
 
 .skills-item__word {
-  font-family: 'ivypresto-display', var(--font-serif);
+  font-family: 'IvyPresto Headline', var(--font-serif);
   font-size: 5rem;
   font-style: italic;
   font-weight: 300;
@@ -1527,7 +1527,7 @@ section + section {
 
 .skills-item__desc {
   position: absolute;
-  right: -80px;
+  right: -220px;
   top: 0.55em;
   width: 300px;
   font-family: var(--font-sans);
@@ -1540,7 +1540,7 @@ section + section {
   transition: opacity 0.3s ease;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .skills-item {
     flex-direction: column;
     align-items: center;
