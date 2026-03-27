@@ -3,7 +3,7 @@ var PAGE_CONFIG = {
     name: "Neutral",
     logo: "images/neutral-logo.png"
   },
-  greeting: ["hello,", "Neutral team!"],
+  greeting: ["hello,", "team!"],
 
   sections: {
     hero: true,
