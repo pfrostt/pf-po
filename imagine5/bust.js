@@ -59,6 +59,18 @@ function init(container) {
     const scale = 1.6 / maxDim;
     bust.scale.setScalar(scale);
 
+    // Override material to warm marble
+    const marbleMat = new THREE.MeshStandardMaterial({
+      color: 0xe8e4dc,
+      roughness: 0.65,
+      metalness: 0,
+    });
+    bust.traverse((child) => {
+      if (child.isMesh) {
+        child.material = marbleMat;
+      }
+    });
+
     scene.add(bust);
   });
 
