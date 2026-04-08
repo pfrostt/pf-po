@@ -46,7 +46,7 @@ function init(container) {
   dracoLoader.setDecoderPath('https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/libs/draco/');
   const loader = new GLTFLoader();
   loader.setDRACOLoader(dracoLoader);
-  loader.load('models/product.glb', (gltf) => {
+  loader.load('models/bust.glb', (gltf) => {
     bust = gltf.scene;
 
     // Auto-center and scale
