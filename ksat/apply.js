@@ -502,8 +502,6 @@
     // 0.50→0.60: Footer text fades in
     if (text1) {
       tl.fromTo(text1, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.10, ease: 'none' }, 0.50);
-      // 0.58→0.65: Footer text fades out before outro
-      tl.to(text1, { opacity: 0, y: -20, duration: 0.07, ease: 'none' }, 0.58);
     }
 
     // 0.65→0.90: "But did you also know..." char-by-char reveal
