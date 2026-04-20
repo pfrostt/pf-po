@@ -854,11 +854,11 @@
     headings.forEach(function (h, i) { h.classList.toggle('is-active', i === index); });
   }
 
-  // Show the index as the showcase approaches; hide once the sticky scroll begins
+  // Show the index during the full showcase scroll; hide when it ends
   ScrollTrigger.create({
     trigger: showcase,
     start: 'top 80%',
-    end: 'top top',
+    end: 'bottom bottom',
     onEnter:      function () { if (indexEl) indexEl.classList.add('is-visible'); },
     onEnterBack:  function () { if (indexEl) indexEl.classList.add('is-visible'); },
     onLeave:      function () { if (indexEl) indexEl.classList.remove('is-visible'); },
