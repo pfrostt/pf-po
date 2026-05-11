@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Early mouse/pointer tracker — must be before all other scripts -->
+  <script>
+    window.__mouseX = 0;
+    window.__mouseY = 0;
+    window.__mouseActive = false;
+    function __onPointer(e) {
+      window.__mouseActive = true;
+      window.__mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+      window.__mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+    }
+    document.addEventListener('mousemove', __onPointer, true);
+    document.addEventListener('pointermove', __onPointer, true);
+  </script>
+
+  <title>Application — Advansor | Paul Frost</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Application — Advansor | Paul Frost">
+  <meta property="og:description" content="A personal application for Advansor.">
+  <meta property="og:image" content="https://roamer.se/images/opengraph.jpg">
+  <meta property="og:url" content="https://roamer.se/advansor/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Application — Advansor | Paul Frost">
+  <meta name="twitter:description" content="A personal application for Advansor.">
+  <meta name="twitter:image" content="https://roamer.se/advansor/images/og-image.png">
+
+  <!-- Block indexing -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <!-- Preload fonts to prevent layout shift -->
+  <link rel="preload" href="fonts/IvyPrestoHeadline-SemiBold.otf" as="font" type="font/opentype" crossorigin>
+  <link rel="preload" href="fonts/IvyPrestoHeadline-Regular.otf" as="font" type="font/opentype" crossorigin>
+  <link rel="preload" href="fonts/IvyPrestoHeadline-LightItalic.otf" as="font" type="font/opentype" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/nys7xhm.css">
+
+  <!-- Prevent browser scroll restoration (must be in <head> for earliest execution) -->
+  <script>if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
+
+  <!-- Three.js import map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="apply.css">
+
+  <!-- Favicon (reuse site favicon) -->
+  <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MMM3S6R1P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-0MMM3S6R1P');
+  </script>
+</head>
+<body>
+  <div class="grain-overlay"></div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <a href="https://roamer.se" class="hero__logo">
+    <img src="images/paulfrost-logo.svg" alt="Paul Frost">
+  </a>
+  <nav class="site-nav" id="siteNav" data-section="hero">
+    <div class="hero__top-center">
+      <div class="hero__greeting hero-fade-simple" style="--fade-delay: 0s">
+        <span>hi</span>
+        <img data-config-logo src="images/advansor-logo.svg" alt="Advansor">
+        <span>team,</span>
+      </div>
+    </div>
+  </nav>
+
+  <p class="hero__tagline hero-fade-simple" style="--fade-delay: 0.1s" data-config="hero-tagline">I made you a website because a CV cannot show you what your channel could look like.</p>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero section--cream" data-section="hero">
+    <div class="hero__bust" id="heroBust"></div>
+
+    <div class="hero__main">
+      <h1 class="hero__heading hero-fade" style="--fade-delay: 0.2s" data-config="hero-heading">The video producer for the company that makes CFOs excited. <em class="hero__heading-italic">Someone has to.</em></h1>
+      <p class="hero__subtitle hero-fade" style="--fade-delay: 0.3s" data-config="hero-subtitle">This is my unusual application and I am the reason your next episode gets ten times the views.</p>
+    </div>
+    <p class="hero__subtitle-emphasis hero-fade" style="--fade-delay: 0.4s">And here is why;</p>
+  </section>
+
+  <!-- ==================== WHY AXIS ==================== -->
+  <section id="why-axis" class="section section--cream section-about" data-section="whyAxis">
+    <div class="container">
+      <p class="about-intro reveal" data-config="about-intro">Before anything else, let me prove I actually understand what you do.</p>
+
+      <div class="text-reveal" id="textReveal">
+        <div class="about-columns">
+          <p class="about-column" data-config="about-col-1"><img src="images/wtp-logo.svg" alt="WTP" class="inline-logo"> do not just consult on pricing. You walk into B2B SaaS companies and tell them they have been dramatically undercharging for years. 150 projects. Zero failures. 234 percent average price increase. That is either very good consulting or very good bedside manner. Probably both.</p>
+          <p class="about-column" data-config="about-col-2">But the expertise that closes those deals deserves a content engine that matches it. Right now the channel is not there yet. I know exactly how to change that.</p>
+        </div>
+
+        <p class="about-outro" data-config="about-outro">That someone is me. And I brought receipts.</p>
+        <div class="about-line" id="aboutLine"></div>
+        <div class="about-vline" id="aboutVLine"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CLIENT LOGOS ==================== -->
+  <section id="clients" class="clients-section section section--cream" data-section="clients">
+    <p class="clients-intro reveal" data-config="clients-intro">Now let's talk about me. But briefly, I promise.</p>
+
+    <div class="clients-grid">
+      <!-- Left marquee — scrolls up -->
+      <div class="marquee-col marquee-col--up">
+        <div class="marquee-track">
+          <div class="marquee-list">
+            <img src="images/logos/business-insider.png" alt="Business Insider">
+            <img src="images/logos/canon.png" alt="Canon">
+            <img src="images/logos/dell.png" alt="Dell">
+            <img src="images/logos/eit.png" alt="EIT">
+            <img src="images/logos/globhe.png" alt="Globhe">
+            <img src="images/logos/channel5.png" alt="Channel 5">
+            <img src="images/logos/adidem.png" alt="Adidem">
+          </div>
+          <div class="marquee-list" aria-hidden="true">
+            <img src="images/logos/business-insider.png" alt="">
+            <img src="images/logos/canon.png" alt="">
+            <img src="images/logos/dell.png" alt="">
+            <img src="images/logos/eit.png" alt="">
+            <img src="images/logos/globhe.png" alt="">
+            <img src="images/logos/channel5.png" alt="">
+            <img src="images/logos/adidem.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- Center text -->
+      <div class="clients-center">
+        <h2 class="clients-heading reveal" data-config="clients-heading">More than a decade. Clients from five continents. And footage from places my travel insurance did not cover.</h2>
+      </div>
+
+      <!-- Right marquee — scrolls down -->
+      <div class="marquee-col marquee-col--down">
+        <div class="marquee-track">
+          <div class="marquee-list">
+            <img src="images/logos/business-insider.png" alt="Business Insider">
+            <img src="images/logos/canon.png" alt="Canon">
+            <img src="images/logos/dell.png" alt="Dell">
+            <img src="images/logos/eit.png" alt="EIT">
+            <img src="images/logos/globhe.png" alt="Globhe">
+            <img src="images/logos/channel5.png" alt="Channel 5">
+            <img src="images/logos/adidem.png" alt="Adidem">
+          </div>
+          <div class="marquee-list" aria-hidden="true">
+            <img src="images/logos/business-insider.png" alt="">
+            <img src="images/logos/canon.png" alt="">
+            <img src="images/logos/dell.png" alt="">
+            <img src="images/logos/eit.png" alt="">
+            <img src="images/logos/globhe.png" alt="">
+            <img src="images/logos/channel5.png" alt="">
+            <img src="images/logos/adidem.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="clients-outro" id="clientsOutro" data-config="clients-outro">Different briefs, different budgets, same request:</p>
+
+  </section>
+
+  <!-- ==================== VIDEO SHOWCASE ==================== -->
+  <section class="section section--cream video-section" id="videoSection" data-section="video">
+    <div class="video-section__content">
+      <div class="video-section__intro">
+        <h2 class="video-section__heading" data-config="video-heading">...make people care about what we <span class="heading-italic">do.</span></h2>
+        <p class="video-section__sub" data-config="video-sub">Here is what that looks like in action:</p>
+      </div>
+
+      <div class="video-section__player" id="videoPlayer">
+        <iframe
+          tabindex="-1"
+          src="https://player.vimeo.com/video/1140568272?h=09bcc670dc&title=0&byline=0&portrait=0&autoplay=1&muted=1&controls=0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          loading="eager"
+          title="Urban Mobility — Carpooling Platform Film"
+        ></iframe>
+        <button class="video-play-overlay" id="videoPlayOverlay" aria-label="Play video with sound">
+          <svg width="20" height="24" viewBox="0 0 20 24" fill="none">
+            <path d="M0 0L20 12L0 24V0Z" fill="currentColor"/>
+          </svg>
+        </button>
+        <div class="video-controls" id="videoControls">
+          <button class="video-controls__pause" id="videoPauseBtn" aria-label="Pause video">
+            <svg width="18" height="24" viewBox="0 0 18 24" fill="none">
+              <rect x="0" y="0" width="6" height="24" rx="1" fill="currentColor"/>
+              <rect x="12" y="0" width="6" height="24" rx="1" fill="currentColor"/>
+            </svg>
+          </button>
+          <button class="video-controls__subtitles" id="videoSubtitlesBtn" aria-label="Toggle subtitles">CC</button>
+          <div class="video-controls__volume" id="videoVolume">
+            <div class="video-controls__volume-track">
+              <div class="video-controls__volume-fill" id="videoVolumeFill"></div>
+            </div>
+          </div>
+          <div class="video-controls__progress" id="videoProgress">
+            <div class="video-controls__progress-fill" id="videoProgressFill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-section__footer">
+        <h3 class="video-section__text" id="videoText1" data-config="video-text1">Now put this quality behind Ulrik. Every conversation. Every insight. Every week.</h3>
+        <p class="video-outro" id="videoOutro" data-config="video-outro">But did you also know that I'm really good with?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS ==================== -->
+  <section class="skills-section section--dark" id="skillsSection" data-section="skills">
+    <div class="skills-box">
+      <div class="skills-list" data-config-skills>
+        <div class="skills-item">
+          <span class="skills-item__num">(001)</span>
+          <span class="skills-item__word">Cinematography</span>
+          <span class="skills-item__desc">Cinema cameras, lighting, composition, movement, color grading. The full visual language. From first frame to final grade.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(002)</span>
+          <span class="skills-item__word">Editing</span>
+          <span class="skills-item__desc">Premiere Pro, DaVinci Resolve, Final Cut. Long form, short form, podcast, webinar. Retention, pacing, hooks. The edit is where the story actually gets made.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(003)</span>
+          <span class="skills-item__word">Studio</span>
+          <span class="skills-item__desc">Camera placement, lighting design, backdrop, sound treatment, set composition. The environment is half the production.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(004)</span>
+          <span class="skills-item__word">Interviews</span>
+          <span class="skills-item__desc">Pre-interview prep, framing, directing on camera talent, follow up questions, story extraction. The conversation does the work. The setup makes it possible.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(005)</span>
+          <span class="skills-item__word">Short Form</span>
+          <span class="skills-item__desc">LinkedIn, YouTube Shorts, Reels. Hooks, pacing, captions, platform native formats. Short form is not a cut down version of long form. It is a completely different craft.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(006)</span>
+          <span class="skills-item__word">AI Tools</span>
+          <span class="skills-item__desc">Claude, Adobe Generative AI, Runway, Perplexity. Transcription, repurposing, thumbnails, captions. The machine handles the repetitive. I handle the creative.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(007)</span>
+          <span class="skills-item__word">YouTube</span>
+          <span class="skills-item__desc">YouTube Studio, retention curves, CTR optimization, hooks, thumbnail strategy, watch time. I know the difference between content that looks good and content that performs. The channel metrics tell you which one you made.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(008)</span>
+          <span class="skills-item__word">Podcast</span>
+          <span class="skills-item__desc">Recording, editing, pacing, guest management, audio quality, publishing workflows. Long form conversations are a different craft than video. I know both.</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__num">(009)</span>
+          <span class="skills-item__word">Performance</span>
+          <span class="skills-item__desc">YouTube Analytics, LinkedIn insights, A/B testing, retention data. I track what works, cut what does not, and make decisions with numbers not opinions.</span>
+        </div>
+      </div>
+
+      <div class="skills-outro">
+        <p class="skills-outro__text" data-config="skills-outro">"Cool skills Paul, but what would you actually do here?" Great question. Keep scrolling.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FRAMEWORK ==================== -->
+  <section class="proof-section section--cream" id="proofSection" data-section="proof">
+    <div class="proof-box" id="proofBox">
+      <div class="proof-content">
+        <div class="proof-left">
+          <p data-config="proof-left">You need someone who can build a content engine, run it every week, and make sure every episode performs better than the last. That is not just production. That is a system. And I love systems.</p>
+        </div>
+        <div class="proof-right" data-config-proof-steps>
+          <div class="proof-step">
+            <h3 class="proof-step__title">
+              <span class="proof-step__title-mask">
+                <span class="proof-step__title-slide">
+                  <span class="proof-step__title-text" data-config="proof-step-1-title">01 / Build the Studio</span>
+                  <span class="proof-step__title-text" data-config-title-dup="proof-step-1-title">01 / Build the Studio</span>
+                </span>
+              </span>
+            </h3>
+            <div class="proof-step__line"></div>
+            <p class="proof-step__desc" data-config="proof-step-1-desc">Before a single episode gets filmed, the environment needs to be right. Lighting, backdrop, camera placement, sound treatment. The Diary of CEO did not happen by accident. Neither will yours.</p>
+          </div>
+          <div class="proof-step">
+            <h3 class="proof-step__title">
+              <span class="proof-step__title-mask">
+                <span class="proof-step__title-slide">
+                  <span class="proof-step__title-text" data-config="proof-step-2-title">02 / Own the Shoot</span>
+                  <span class="proof-step__title-text" data-config-title-dup="proof-step-2-title">02 / Own the Shoot</span>
+                </span>
+              </span>
+            </h3>
+            <div class="proof-step__line"></div>
+            <p class="proof-step__desc" data-config="proof-step-2-desc">Show up, set up, direct, film, wrap. Every week. Every guest. Every format. I handle everything that happens between the brief and the footage handover. You focus on the conversation.</p>
+          </div>
+          <div class="proof-step">
+            <h3 class="proof-step__title">
+              <span class="proof-step__title-mask">
+                <span class="proof-step__title-slide">
+                  <span class="proof-step__title-text" data-config="proof-step-3-title">03 / Edit for Performance</span>
+                  <span class="proof-step__title-text" data-config-title-dup="proof-step-3-title">03 / Edit for Performance</span>
+                </span>
+              </span>
+            </h3>
+            <div class="proof-step__line"></div>
+            <p class="proof-step__desc" data-config="proof-step-3-desc">Long form goes out on YouTube. The best sixty seconds goes on LinkedIn. The sharpest clip becomes a Short. One shoot day. Maximum output. Every time.</p>
+          </div>
+          <div class="proof-step">
+            <h3 class="proof-step__title">
+              <span class="proof-step__title-mask">
+                <span class="proof-step__title-slide">
+                  <span class="proof-step__title-text" data-config="proof-step-4-title">04 / Improve Every Week</span>
+                  <span class="proof-step__title-text" data-config-title-dup="proof-step-4-title">04 / Improve Every Week</span>
+                </span>
+              </span>
+            </h3>
+            <div class="proof-step__line"></div>
+            <p class="proof-step__desc" data-config="proof-step-4-desc">Retention curves, click through rates, watch time. I track what performs, cut what does not, and make the next episode better than the last. No vanity metrics. Just honest answers.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="proof-closing" id="proofClosing" data-config="proof-closing">If you have scrolled this far, I think we both know what comes next.</p>
+    </div>
+  </section>
+
+  <!-- ==================== CTA / CLOSING ==================== -->
+  <section class="closing-section section--cream" id="closingSection" data-section="closing">
+    <div class="closing-content">
+      <h2 class="closing-heading" data-config="closing-heading">I am <span class="closing-name">Paul Frost</span>. I watched 47 minutes of SaaS pricing content to write this. Your channel deserves better. I am the person to do it.</h2>
+      <p class="closing-sub" data-config="closing-sub">If the page convinced you, the conversation will too.</p>
+      <div class="closing-line"></div>
+      <div class="closing-contacts">
+        <span><strong>Email:</strong> <a href="mailto:paul@roamer.se" data-config="contact-email">paul@roamer.se</a></span>
+        <span><strong>Phone:</strong> <a href="tel:+46764510037" data-config="contact-phone">+46 764 51 0037</a></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="page-config.js"></script>
+  <script src="apply.js"></script>
+  <script type="module" src="bust.js"></script>
+</body>
+</html>
