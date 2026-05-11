@@ -36,7 +36,6 @@
 
 /* --- Fonts --- */
 @import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 /* Local IvyPresto files — fallback if Typekit fails */
 @font-face {
@@ -74,15 +73,11 @@
 /*
   Available font weights reference:
 
-  IvyPresto Headline (via Typekit 'ivypresto-headline'):
-    100 italic, 300, 400, 400 italic, 700, 700 italic
+  IvyPresto Display (via Typekit 'ivypresto-display', fallback: local 'IvyPresto Headline' OTF):
+    100 italic, 300, 400, 400 italic, 600, 700, 700 italic
 
-  Neue Haas Grotesk Display Pro (via cdnfonts):
-    100, 200, 300, 400, 500, 600, 700, 900
-    + italic for each weight
-
-  Playfair Display (via Google Fonts):
-    400, 700, 900 + italic for each
+  Neue Haas Grotesk Display (via Typekit 'neue-haas-grotesk-display', fallback: cdnfonts 'Neue Haas Grotesk Display Pro'):
+    100, 200, 300, 400, 500, 600, 700, 900 + italic for each
 */
 
 /* --- Custom Properties --- */
@@ -96,8 +91,8 @@
   --color-border: rgba(26, 26, 26, 0.12);
   --color-border-light: rgba(245, 240, 235, 0.15);
 
-  --font-sans: 'Neue Haas Grotesk Display Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'neue-haas-grotesk-display', 'Neue Haas Grotesk Display Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-serif: 'ivypresto-display', 'IvyPresto Headline', Georgia, 'Times New Roman', serif;
 
   --ease: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -353,7 +348,7 @@ p {
 }
 
 .hero__heading {
-  font-family: 'ivypresto-headline', 'IvyPresto Headline', var(--font-serif);
+  font-family: 'ivypresto-display', 'IvyPresto Headline', var(--font-serif);
   font-size: clamp(3rem, 2rem + 5vw, 5.5rem);
   font-weight: 400;
   line-height: 1.05;
@@ -365,7 +360,7 @@ p {
 }
 
 .heading-italic {
-  font-family: 'ivypresto-headline', 'IvyPresto Headline', var(--font-serif) !important;
+  font-family: 'ivypresto-display', 'IvyPresto Headline', var(--font-serif) !important;
   font-weight: 100 !important;
   font-style: italic !important;
   font-synthesis: none;
@@ -473,7 +468,7 @@ p {
 }
 
 .works__browser-sub {
-  font-family: 'ivypresto-headline', 'IvyPresto Headline', var(--font-serif);
+  font-family: 'ivypresto-display', 'IvyPresto Headline', var(--font-serif);
   font-size: clamp(1rem, 0.8rem + 1vw, 1.4rem);
   font-weight: 400;
   font-style: italic;
@@ -731,7 +726,7 @@ p {
   position: fixed;
   z-index: 9999;
   pointer-events: none;
-  font-family: 'ivypresto-headline', 'IvyPresto Headline', var(--font-serif);
+  font-family: 'ivypresto-display', 'IvyPresto Headline', var(--font-serif);
   font-size: clamp(16px, 1.6vw, 22px);
   font-weight: 500;
   font-style: italic;
@@ -851,7 +846,7 @@ p {
 
 /* --- Intro highlight (reused by notice overlay) --- */
 .clients__intro-highlight {
-  font-family: 'ivypresto-headline', 'IvyPresto Headline', var(--font-serif);
+  font-family: 'ivypresto-display', 'IvyPresto Headline', var(--font-serif);
   font-weight: 600;
   font-style: italic;
 }
@@ -1769,7 +1764,7 @@ p {
 }
 
 .contact__intro-text {
-  font-family: 'ivypresto-headline', 'IvyPresto Headline', var(--font-serif);
+  font-family: 'ivypresto-display', 'IvyPresto Headline', var(--font-serif);
   font-size: clamp(1rem, 0.8rem + 1vw, 1.4rem);
   font-weight: 400;
   font-style: italic;
@@ -1787,7 +1782,7 @@ p {
 }
 
 .contact__text {
-  font-family: 'ivypresto-headline', 'IvyPresto Headline', var(--font-serif);
+  font-family: 'ivypresto-display', 'IvyPresto Headline', var(--font-serif);
   font-size: 28px;
   font-weight: 200;
   line-height: 1.25;
