@@ -804,11 +804,7 @@ p {
   align-items: center;
   justify-content: center;
   gap: 7px;
-  position: absolute;
-  bottom: calc(6vh + 8vh + 80px);
-  left: 0;
-  right: 0;
-  z-index: 3;
+  margin-top: 32px;
 }
 
 .works__page {
@@ -1915,6 +1911,10 @@ p {
     grid-row: 1 / -1;
   }
 
+  .works__image video {
+    aspect-ratio: 16 / 9;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -2138,7 +2138,6 @@ p {
   .works__pagination {
     gap: 10px;
     margin-top: 6vh;
-    position: static;
     order: 7;
   }
 
