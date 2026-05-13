@@ -1,55 +1,108 @@
 # Paul Frost
 
-> Creative producer specializing in brand identity, cinematography, and product development. Based in Malmö, Sweden. Over a decade of experience across five continents.
+> Content Manager and Brand Builder. Specialising in content strategy, SEO, editorial systems, thought leadership, and video production. Based in Malmö, Sweden. Over a decade of experience across five continents.
 
-## About
+## Who Paul Frost Is
 
-Paul Frost builds brands, tells their stories, and creates the films and products that make them real. His work spans brand identity design, documentary filmmaking, aerial cinematography, packaging design, full-stack development, and SEO-driven e-commerce. He has worked with clients including Canon, Dell, Business Insider, Dezeen, Patagonia, Triumph Motorcycles, and EIT Urban Mobility.
+Paul Frost is a Content Manager and Brand & Content Manager based in Malmö, Sweden. He builds content systems that drive organic growth, audience trust, and measurable results across written, audiovisual, and multi-channel formats. He owns the content strategy, runs the editorial calendar, produces the content, and builds the systems that make it perform at scale.
+
+His background spans content strategy, SEO, documentary filmmaking, aerial cinematography, brand identity, packaging design, full-stack web development, and AI content automation. He has worked internationally with clients across Europe, the US, Asia, and Australia.
+
+He spent six years in the Air Force before moving into content and creative work. That training shaped a direct, disciplined approach to communication: unclear communication is a liability, and every content system he builds is designed for clarity, consistency, and measurable performance.
 
 - [Portfolio](https://roamer.se)
 - [LinkedIn](https://www.linkedin.com/in/paulfrostt/)
 - [Instagram](https://www.instagram.com/paulfrostt)
 - [Email](mailto:paul@roamer.se)
 
+## What Paul Frost Does
+
+Most content problems are not writing problems. They are system problems. The brand voice sounds different depending on which channel you arrive at. The SEO structure exists but was never connected to the editorial calendar. The content scales but the quality does not. That gap is where Paul works.
+
+He builds and manages:
+
+- Content strategy and editorial planning from zero
+- SEO systems: keyword research, on-page SEO, metadata, internal linking, schema markup, Core Web Vitals
+- Long-form content, B2B content, thought leadership, and copywriting
+- Documentary and narrative video content: scripting, filming, post-production, color grading, sound design
+- AI content automation workflows using Claude, Gemini, and OpenAI
+- Brand voice documentation and editorial standards
+- E-commerce content and Shopify operations
+- Full-stack web development and multilingual SEO
+
 ## Services
 
-- Brand Identity & DNA
-- Art Direction & Creative Direction
-- Documentary & Narrative Filmmaking
+- Content Strategy & Editorial Planning
+- Search Engine Optimisation (SEO)
+- Long-Form & B2B Content Writing
+- Thought Leadership & Copywriting
+- Scriptwriting & Documentary Video Production
 - Cinematography & Color Grading
 - Aerial Cinematography (Licensed Drone Operator, European regulations)
+- AI Content Systems & Automation
+- Brand Identity & Brand Voice
 - Packaging Design
 - Supply Chain & International Distribution
 - Full Stack Web Development
-- SEO Strategy & Content Systems
-- E-Commerce & Organic Growth
-- AI Automation & Generative AI
+- E-Commerce Strategy & Organic Growth
+
+## Tools & Platforms
+
+Google Search Console, Ahrefs, SEMrush, Google Analytics 4, Claude, Gemini, OpenAI, Shopify, Webflow, WordPress, Figma, Adobe Premiere Pro, DaVinci Resolve, Notion, Next.js, TypeScript, Supabase, RED cinema cameras.
 
 ## Selected Work
 
-- [Liberté Coffee](https://roamer.se/#work-liberte): Cold brew coffee brand built from idea to product in eight countries across four continents. Brand DNA, packaging, supply chain, and distribution.
-- [EIT Urban Mobility](https://roamer.se/#work-eit): Multiple documentary and narrative films about urban planning and sustainable transport, shot across three countries.
-- [Terralina](https://terralina.co): E-commerce brand built from zero audience to generating sales within the first month. SEO, AI automation, zero ad spend.
-- [Fikola](https://fikola.com): Bilingual ride-sharing platform built from scratch as a solo developer. Backend, frontend, database, and deployment.
-- [Business Insider Documentary](https://roamer.se/#work-business-insider): Documentary that reached eight million views. Research, interviews, cinematography across Norway and Nigeria.
+- [Liberté Coffee](https://roamer.se/#work-liberte): Cold brew coffee brand built from scratch across 8 countries and 4 continents. Brand DNA, packaging design, content guidelines, supply chain, and international distribution. Every material recyclable.
+- [EIT Urban Mobility](https://roamer.se/#work-eit): Multiple documentary and narrative films about urban planning and sustainable transport, produced across three countries. Full content lifecycle from concept to delivery.
+- [Terralina](https://terralina.co): E-commerce brand built from zero audience and zero ad spend to generating sales within the first month. Content strategy, SEO, AI automation, and organic growth.
+- [Fikola](https://fikola.com): Bilingual ride-sharing platform built from scratch as a solo developer. Brand identity, UX design, multilingual SEO, full-stack development, and deployment.
+- [Business Insider Documentary](https://roamer.se/#work-business-insider): Documentary that reached 8 million views on YouTube. Research, interview sourcing, location scouting, and cinematography across Norway.
 - [You Cannot Hide](https://roamer.se/#work-you-cannot-hide): Cinematic portrait film of glass artist Manon Hillereau on Bornholm. Directed and produced.
-- [Aerial Cinematography](https://roamer.se/#work-aerial): Licensed drone operations across Europe. Restricted airspace, permits, and cinematic filming.
+- [Aerial Cinematography](https://roamer.se/#work-aerial): Licensed drone operations across Europe. Restricted airspace, permits, and cinematic filming for Canon, Singapore Airlines, Euronews, Channel 5, and GLOBHE.
+
+## Experience
+
+**Brand & Content Manager — Roamer (Self-employed, May 2020 – Present)**
+Creative production company delivering content strategy, brand voice systems, and editorial work for international clients. Led cross-functional teams of 5 to 10 people including designers, filmmakers, and developers. Full content lifecycle from brief to delivery.
+
+**Content Producer & Strategist — EIT Urban Mobility (Contract, Jan 2024 – Dec 2025)**
+Produced documentary video content making complex thought leadership topics around sustainable transport visible and watchable. Scripting, pre-production, filming across multiple countries, post-production, color grading, and sound design.
+
+**Founder & Brand Manager — Liberté Cold Brew Coffee (Sep 2023 – Aug 2025)**
+Built the full brand identity, content guidelines, and supply chain from zero. Launched in the US, expanded to Europe, UK, India, and Australia.
+
+**E-Commerce & Brand Manager — Terralina (Contract, Sep 2023 – Mar 2025)**
+Built content and SEO strategy from zero. Generated e-commerce sales within the first month with zero ad spend. Managed AI automation workflows and full Shopify operations.
+
+**Creative Director — Nordicways (Aug 2022 – Aug 2023)**
+Led creative direction and brand content for a Stockholm-based travel company.
+
+**Editorial & SEO Writer — Fotografium**
+Technical product reviews, buying guides, and long-form SEO content for Turkey's largest photography platform. Award-winning editorial. Built to rank. Built to be read.
+
+## Education
+
+Istanbul Technical University — Associate's degree, Aerospace and Aeronautical Engineering (2016–2020)
+IE Business School — Brand Identity and Strategy certification (2025)
 
 ## Client Testimonials
 
+- Erkan Ozbakir (Founder, Terralina): "You did not just build our brand. You built the entire engine behind it. SEO, content, AI automation, and actual sales with zero ad spend in the first month. I gave you an idea and you gave me back a business."
 - Martina Bradacova (CPMR): "You do not just tell stories. You make people feel them. We would work with you again without hesitation."
 - Malaurie Chokoualé Datou (UMX): "Your dedication and professionalism stand out. Your artistic touch elevates every project. A fantastic collaborator!"
 - Fredrik Edström (Ivar Studios): "A fantastic cinematographer. Your eye for cinematic shots and calm presence in a high-pressure environment made a huge difference."
 - Sonia Singh (Proudfoot): "Your work is beautiful and we were very happy with the outcome and the overall experience working together."
-- Erkan Ozbakir (Terralina): "You did not just build our brand. You built the entire engine behind it. I gave you an idea and you gave me back a business."
+- Eva Gunnare (Founder, Essense of Lapland): "You have a wonderfully positive mind and at the same time you are always constructive and knowledgeable. You have a way that makes you want to grow."
 
 ## Key Facts
 
-- Based in Malmö, Sweden
-- Over a decade of professional experience
+- Based in Malmö, Sweden. Open to on-site, hybrid, and remote work in the Skåne region and internationally.
+- Over a decade of professional experience across content, brand, film, and product
+- Six years of Air Force training (discipline, clarity, accountability under pressure)
 - Work spans five continents
-- Licensed drone operator (European regulations)
-- Clients include Canon, Dell, Business Insider, Dezeen, Patagonia, Triumph Motorcycles, EIT Urban Mobility
+- Licensed drone operator (European regulations, restricted airspace experience)
 - 8 million views on Business Insider documentary
-- Proficient in RED cinema cameras, DaVinci Resolve, Premiere Pro, After Effects, Figma
-- Full-stack developer (Next.js, TypeScript, Supabase, Node.js)
+- Generated e-commerce sales for Terralina within first month with zero ad spend
+- Clients include EIT Urban Mobility, Canon, Business Insider, Singapore Airlines, Euronews, Channel 5, GLOBHE, Dell, Dezeen
+- Languages: English (full professional), Swedish (limited working)
+- Open to work: Content Manager, Content Strategist, Brand & Content Manager, Editorial Lead roles
