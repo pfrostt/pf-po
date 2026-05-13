@@ -72,7 +72,7 @@
       image: null,
       video: 'videos/business.mp4',
       title: 'Business Insider',
-      desc: 'Eight million views. That is how many people watched a documentary I shot for Business Insider. I did not just show up with a camera. I researched the subject, found the people worth interviewing, scouted every location, and filmed across Norway and Nigeria while working with a UK based producer. Cinematography and aerial. Pre-production to final delivery.'
+      desc: 'Eight million views. That is how many people watched a documentary I shot for Business Insider. I did not just show up with a camera. I researched the subject, found the people worth interviewing, scouted every location, and filmed across Norway while working with a UK based producer. Cinematography and aerial. Pre-production to final delivery.'
     },
     {
       searchText: 'someone who can capture the human story behind a brand',
