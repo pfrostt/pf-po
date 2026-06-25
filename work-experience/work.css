@@ -1,0 +1,417 @@
+/* ============================================
+   WORK EXPERIENCE — standalone page (read.cv style)
+   Self-contained: replicates the site's font + color
+   foundation so it matches roamer.se without inheriting
+   homepage layout styles.
+   ============================================ */
+
+/* --- Fonts (same stack as homepage) --- */
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+
+/* Local IvyPresto files — fallback if Typekit fails */
+@font-face {
+  font-family: 'IvyPresto Headline';
+  src: url('../fonts/IvyPrestoHeadline-Light.otf') format('opentype');
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'IvyPresto Headline';
+  src: url('../fonts/IvyPrestoHeadline-LightItalic.otf') format('opentype');
+  font-weight: 300; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'IvyPresto Headline';
+  src: url('../fonts/IvyPrestoHeadline-Regular.otf') format('opentype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'IvyPresto Headline';
+  src: url('../fonts/IvyPrestoHeadline-SemiBold.otf') format('opentype');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+
+/* --- Tokens (mirror homepage :root) --- */
+:root {
+  --color-light: #F5F4ED;
+  --color-light-alt: #ebe6df;
+  --color-dark: #1a1a1a;
+  --color-dark-alt: #2a2a2a;
+  --color-muted: #9a958e;
+  --color-body: #5a5550;
+  --color-border: rgba(26, 26, 26, 0.12);
+
+  --font-sans: 'neue-haas-grotesk-display', 'Neue Haas Grotesk Display Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-serif: 'ivypresto-display', 'IvyPresto Headline', Georgia, 'Times New Roman', serif;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --page-max: 1200px;
+  --container-padding: 24px;
+}
+@media (max-width: 767px) { :root { --container-padding: 20px; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-dark);
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection { background: var(--color-dark); color: #fff; }
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ============================================
+   NAVBAR (same as homepage roamer.se)
+   ============================================ */
+.hero__logo { position: fixed; left: var(--container-padding); top: 32px; z-index: 101; }
+.hero__logo img { height: 20px; width: auto; margin-top: 6px; }
+
+.site-nav {
+  position: fixed;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 101;
+  display: flex;
+  gap: 30px;
+  mix-blend-mode: difference;
+}
+.site-nav__link {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  padding: 4px 0;
+}
+.site-nav__link:hover { opacity: 0.5; }
+
+.hamburger { display: none; }
+
+@media (max-width: 767px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    position: fixed;
+    top: 24px;
+    right: var(--container-padding);
+    z-index: 102;
+    width: 24px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    mix-blend-mode: difference;
+  }
+  .hamburger__line {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .hamburger.is-open .hamburger__line:first-child { transform: translateY(3.25px) rotate(45deg); }
+  .hamburger.is-open .hamburger__line:last-child { transform: translateY(-3.25px) rotate(-45deg); }
+
+  .hero__logo { top: 24px; z-index: 103; }
+
+  .site-nav {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    z-index: 101;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    background: var(--color-dark);
+    mix-blend-mode: normal;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+  }
+  .site-nav.is-open { visibility: visible; opacity: 1; }
+  .site-nav__link { font-family: var(--font-serif); font-size: 1rem; font-weight: 500; color: #fff; }
+}
+
+/* ============================================
+   LAYOUT — sticky heading + entries
+   ============================================ */
+.we {
+  display: grid;
+  /* heading 50% left, works 50% right (until the stacking breakpoint) */
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+  max-width: none;
+  margin: 0;
+  padding: 2.5rem var(--container-padding) 5rem;
+  border-top: 1px solid var(--color-border);
+}
+/* clear the fixed navbar */
+body { padding-top: 6rem; }
+
+.we__heading {
+  font-size: clamp(1.6rem, 1.3rem + 1.4vw, 2.25rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  align-self: start;
+}
+@media (min-width: 900px) {
+  /* sits below the fixed logo/nav (logo top: 32px) so it never collides when stuck */
+  .we__heading { position: sticky; top: 5.5rem; }
+}
+
+.we__entries { display: flex; flex-direction: column; }
+
+/* ============================================
+   ENTRY
+   ============================================ */
+.we-entry { padding: 2.75rem 0; border-top: 1px solid var(--color-border); }
+.we-entry:first-child { border-top: none; padding-top: 0; }
+
+/* logo stacked above company name, all left-aligned (matches reference) */
+.we-entry__head { position: relative; }
+
+.we-entry__logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 13px;
+  overflow: hidden;     /* no padding — logo fills the tile */
+}
+.we-entry__logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+/* Fallback icon tile (no logo asset yet) */
+.we-entry__logo--placeholder {
+  background: var(--color-dark);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.we-entry__years {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-body);
+  background: var(--color-light);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  white-space: nowrap;
+}
+
+.we-entry__company {
+  margin: 2rem 0 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.we-entry__role { margin: -0.4rem 0 0; font-size: 0.8rem; font-weight: 500; color: #000000; }
+
+.we-entry__desc {
+  margin: 1.5rem 0 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--color-body);
+}
+.we-entry__desc + .we-entry__desc { margin-top: 1rem; }
+
+/* ============================================
+   SELECTED PROJECTS GRID
+   ============================================ */
+.we-entry__projects { margin-top: 2.25rem; }
+.we-entry__label {
+  margin: 0 0 1rem;
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+}
+
+.we-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 720px) { .we-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .we-grid { grid-template-columns: 1fr; } }
+
+.we-card { display: block; }
+.we-card[href] { cursor: pointer; }
+.we-card[href] .we-card__media { transition: opacity 0.25s var(--ease-out); }
+.we-card[href]:hover .we-card__media { opacity: 0.88; }
+.we-card__media--wide { aspect-ratio: 16 / 9 !important; }
+/* square tile, image centered + letterboxed on a distinct (non-bg) backdrop */
+.we-card__media--contain { background: var(--color-light-alt) !important; }
+.we-card__media--contain img { object-fit: contain !important; }
+.we-card__media--bottom img { object-position: center bottom; }
+/* 3D point cloud viewer tile */
+.we-card__media--cloud { background: #161512 !important; }
+.we-card__cloud { width: 100%; height: 100%; display: block; cursor: grab; touch-action: pan-y; }
+.we-card__cloud:active { cursor: grabbing; }
+.we-card__cloud-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+  pointer-events: none;
+}
+.we-card__media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color-light);
+  border: 1px solid var(--color-border);
+}
+.we-card__media img,
+.we-card__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Empty placeholder tile (awaiting real photo) */
+.we-card__media--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+/* Minimal black & white client logo wall */
+.we-clients { margin-top: 2.75rem; }
+.we-clients__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 2rem 1rem;
+  align-items: center;
+}
+.we-clients__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+}
+.we-clients__logo img {
+  max-height: 100%;
+  max-width: 65%;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(0.4);   /* uniform monochrome grey */
+  opacity: 0.95;
+  transition: filter 0.25s var(--ease-out);
+}
+.we-clients__logo:hover img { filter: brightness(0) invert(0.1); }
+
+.we-card__title {
+  margin: 0.75rem 0 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+.we-card__category { margin: 0.1rem 0 0; font-size: 0.75rem; font-weight: 600; color: var(--color-muted); }
+
+/* ============================================
+   RESPONSIVE — stack heading above entries
+   ============================================ */
+@media (max-width: 899px) {
+  .we {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1.5rem 4rem;
+  }
+}
+
+/* ============================================
+   CONTACT — mirrors homepage contact section
+   White background to match this page, divider on top
+   ============================================ */
+.contact {
+  background-color: #fff;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem var(--container-padding) 7rem;
+}
+
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 700px;
+}
+
+.contact__text {
+  font-family: var(--font-sans);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.25;
+  max-width: 750px;
+}
+.contact__text strong { font-weight: 600; }
+
+.contact__divider {
+  width: 320px;
+  border: none;
+  border-top: 1.5px solid var(--color-dark);
+  margin: 40px auto 10px;
+}
+
+.contact__email {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+}
+.contact__email a {
+  color: var(--color-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.contact__socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+.contact__socials a {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+.contact__socials a:hover { opacity: 0.6; }
+.contact__socials img { display: block; }
+
+@media (max-width: 767px) {
+  .contact__intro { padding: 0; }
+}

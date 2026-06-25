@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Work Experience — Paul Frost</title>
+
+  <!-- Private / share-by-link only: keep out of search engines -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <!-- Fonts: same stack as the homepage -->
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="preload" href="../fonts/IvyPrestoHeadline-SemiBold.otf" as="font" type="font/opentype" crossorigin>
+  <link rel="preload" href="../fonts/IvyPrestoHeadline-Regular.otf" as="font" type="font/opentype" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/nys7xhm.css">
+
+  <link rel="icon" href="../images/favicon.jpg">
+  <link rel="stylesheet" href="work.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==================== LOGO & NAV (same as homepage) ==================== -->
+  <a href="../" class="hero__logo" aria-label="Paul Frost — home">
+    <img src="../images/paulfrost-logo.svg" alt="Paul Frost">
+  </a>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span class="hamburger__line"></span>
+    <span class="hamburger__line"></span>
+  </button>
+
+  <nav class="site-nav" id="siteNav">
+    <a class="site-nav__link" href="../#works">work</a>
+    <a class="site-nav__link" href="../#clients">reference</a>
+    <a class="site-nav__link" href="../#about">about</a>
+    <a class="site-nav__link" href="../#contact">contact</a>
+  </nav>
+
+  <!-- ==================== WORK EXPERIENCE ==================== -->
+  <main class="we">
+    <aside class="we__heading">Work Experience</aside>
+
+    <div class="we__entries">
+
+      <!-- ROAMER -->
+      <article class="we-entry">
+        <div class="we-entry__head">
+          <div class="we-entry__logo"><img src="../images/logos/roamer.jpg" alt="Roamer"></div>
+          <h2 class="we-entry__company">Roamer</h2>
+          <p class="we-entry__role">Brand Manager &amp; Creative Producer</p>
+          <span class="we-entry__years">2020 - Present</span>
+        </div>
+        <p class="we-entry__desc">Roamer is my creative production company. It delivers content strategy, brand voice systems, editorial, commercial cinematography, and digital product development for international clients across industries and markets.</p>
+        <p class="we-entry__desc">I founded it and run every engagement, building and leading cross-functional teams of designers, filmmakers, and developers, and owning the work from first brief to final delivery. Most of what sits on this site was made under Roamer.</p>
+        <section class="we-entry__projects">
+          <p class="we-entry__label">Selected projects</p>
+          <div class="we-grid">
+            <a class="we-card">
+              <div class="we-card__media"><video src="../videos/business.mp4" autoplay muted loop playsinline></video></div>
+              <h3 class="we-card__title">Business Insider</h3>
+              <p class="we-card__category">Documentary Production</p>
+            </a>
+            <a class="we-card" href="https://www.euronews.com/next/2021/10/21/these-swedish-entrepreneurs-are-using-new-technologies-to-reimagine-the-way-we-shop-and-pa" target="_blank" rel="noopener">
+              <div class="we-card__media we-card__media--contain"><img src="https://i.ytimg.com/vi/XgjR1r8KAAg/maxresdefault.jpg" alt="Euronews" loading="lazy"></div>
+              <h3 class="we-card__title">Euronews</h3>
+              <p class="we-card__category">Director of Photography</p>
+            </a>
+            <a class="we-card">
+              <div class="we-card__media"><video src="../videos/youcannot.mp4" autoplay muted loop playsinline></video></div>
+              <h3 class="we-card__title">Manon Hillereau</h3>
+              <p class="we-card__category">Portrait film</p>
+            </a>
+            <a class="we-card" href="https://www.youtube.com/watch?v=FOLp0AZkfNk" target="_blank" rel="noopener">
+              <div class="we-card__media"><img src="https://i.ytimg.com/vi/FOLp0AZkfNk/maxresdefault.jpg" alt="Dezeen and Stolab" loading="lazy"></div>
+              <h3 class="we-card__title">Dezeen &amp; Stolab</h3>
+              <p class="we-card__category">Drone operator</p>
+            </a>
+            <div class="we-card">
+              <div class="we-card__media we-card__media--cloud">
+                <canvas id="globheCloud" class="we-card__cloud" aria-label="Globhe drone point cloud, drag to rotate"></canvas>
+                <span class="we-card__cloud-loading" id="globheLoading">Loading 3D model…</span>
+              </div>
+              <h3 class="we-card__title">Globhe</h3>
+              <p class="we-card__category">Drone mapping</p>
+            </div>
+            <a class="we-card">
+              <div class="we-card__media"><img src="../images/dell.png" alt="Dell" loading="lazy"></div>
+              <h3 class="we-card__title">Dell</h3>
+              <p class="we-card__category">Director of Photography</p>
+            </a>
+          </div>
+        </section>
+      </article>
+
+      <!-- LIBERTÉ COFFEE -->
+      <article class="we-entry">
+        <div class="we-entry__head">
+          <div class="we-entry__logo"><img src="../images/logos/liberte-square.jpg" alt="Liberté Coffee"></div>
+          <h2 class="we-entry__company">Liberté Coffee</h2>
+          <p class="we-entry__role">Founder &amp; Brand Director</p>
+          <span class="we-entry__years">2023 - 2025</span>
+        </div>
+        <p class="we-entry__desc">Liberté is a cold brew coffee brand I built from zero, the whole operation and not only the brand.</p>
+        <p class="we-entry__desc">I developed the strategy, identity, and voice, wrote all of the copy from product descriptions to marketing, set the content guidelines, and led a cross-functional team of designers, copywriters, and developers to build out the visual identity and packaging. I sourced and ran a supply chain across five countries and held the brand consistent from brief to shelf, every material recyclable. It launched in the US and reached eight countries across four continents.</p>
+        <section class="we-entry__projects">
+          <p class="we-entry__label">Selected projects</p>
+          <div class="we-grid">
+            <a class="we-card">
+              <div class="we-card__media"><video src="../videos/liberte.mp4" autoplay muted loop playsinline></video></div>
+              <h3 class="we-card__title">Liberté Coffee</h3>
+              <p class="we-card__category">Brand, product</p>
+            </a>
+            <a class="we-card">
+              <div class="we-card__media"><img src="../images/liberte-packaging.png" alt="Liberté packaging" loading="lazy"></div>
+              <h3 class="we-card__title">Liberté Coffee</h3>
+              <p class="we-card__category">Packaging, Supply Chain</p>
+            </a>
+            <a class="we-card">
+              <div class="we-card__media we-card__media--contain"><img src="../images/liberte-website.png" alt="Liberté website" loading="lazy"></div>
+              <h3 class="we-card__title">Liberté Coffee</h3>
+              <p class="we-card__category">Website</p>
+            </a>
+          </div>
+        </section>
+      </article>
+
+      <!-- FIKOLA -->
+      <article class="we-entry">
+        <div class="we-entry__head">
+          <div class="we-entry__logo"><img src="../images/logos/fikola.jpg" alt="Fikola"></div>
+          <h2 class="we-entry__company">Fikola</h2>
+          <p class="we-entry__role">Founder &amp; Developer</p>
+          <span class="we-entry__years">2026</span>
+        </div>
+        <p class="we-entry__desc">Fikola is a bilingual carpooling platform. Free to use, no ads, no data selling, no investors.</p>
+        <p class="we-entry__desc">I built all of it solo: brand identity, UX design, website copy, multilingual SEO with hreflang, full stack development on Supabase, Vercel, GitHub, and Resend, and the launch itself.</p>
+        <section class="we-entry__projects">
+          <p class="we-entry__label">Selected projects</p>
+          <div class="we-grid">
+            <a class="we-card">
+              <div class="we-card__media"><video src="../videos/fikola.mp4" autoplay muted loop playsinline></video></div>
+              <h3 class="we-card__title">Fikola</h3>
+              <p class="we-card__category">Brand, UX</p>
+            </a>
+            <a class="we-card">
+              <div class="we-card__media we-card__media--contain we-card__media--bottom"><img src="../images/fikola-home.png" alt="Fikola homepage" loading="lazy"></div>
+              <h3 class="we-card__title">Fikola</h3>
+              <p class="we-card__category">Website</p>
+            </a>
+            <a class="we-card">
+              <div class="we-card__media we-card__media--contain"><img src="../images/fikola-ride.png" alt="Fikola ride detail" loading="lazy"></div>
+              <h3 class="we-card__title">Fikola</h3>
+              <p class="we-card__category">Web application</p>
+            </a>
+          </div>
+        </section>
+      </article>
+
+      <!-- EIT URBAN MOBILITY -->
+      <article class="we-entry">
+        <div class="we-entry__head">
+          <div class="we-entry__logo"><img src="../images/logos/eit.png" alt="EIT Urban Mobility"></div>
+          <h2 class="we-entry__company">EIT Urban Mobility</h2>
+          <p class="we-entry__role">Director &amp; Cinematographer</p>
+          <span class="we-entry__years">2024 - 2025</span>
+        </div>
+        <p class="we-entry__desc">EIT Urban Mobility is a European innovation initiative driving sustainable transport across cities.</p>
+        <p class="we-entry__desc">I was brought in to produce documentary films, and the role grew past production. I read the brand, found the content gaps, proposed concepts and editorial directions, and researched and sourced the people who ended up on screen. I owned each film end to end: scriptwriting, pre-production, filming across several countries, post-production, colour grading, and sound design.</p>
+        <section class="we-entry__projects">
+          <p class="we-entry__label">Selected projects</p>
+          <div class="we-grid">
+            <a class="we-card" href="https://www.youtube.com/watch?v=yFY59fGwg3o" target="_blank" rel="noopener">
+              <div class="we-card__media we-card__media--wide"><img src="https://i.ytimg.com/vi/yFY59fGwg3o/maxresdefault.jpg" alt="What you don’t see about cruise ships" loading="lazy"></div>
+              <h3 class="we-card__title">What you don’t see about cruise ships</h3>
+              <p class="we-card__category">Documentary Film</p>
+            </a>
+            <a class="we-card" href="https://www.youtube.com/watch?v=ilPANu_zeIY" target="_blank" rel="noopener">
+              <div class="we-card__media we-card__media--wide"><img src="https://i.ytimg.com/vi/ilPANu_zeIY/maxresdefault.jpg" alt="How did Umeå become a model city for women?" loading="lazy"></div>
+              <h3 class="we-card__title">How did Umeå become a model city for women?</h3>
+              <p class="we-card__category">Documentary Film</p>
+            </a>
+            <a class="we-card" href="https://www.youtube.com/watch?v=uwlY29t6fes" target="_blank" rel="noopener">
+              <div class="we-card__media we-card__media--wide"><img src="https://i.ytimg.com/vi/uwlY29t6fes/maxresdefault.jpg" alt="I cycle, I feel the cold, but I'll be better soon" loading="lazy"></div>
+              <h3 class="we-card__title">I cycle, I feel the cold, but I'll be better soon</h3>
+              <p class="we-card__category">Narrative</p>
+            </a>
+            <a class="we-card" href="https://www.youtube.com/watch?v=xbCEWBmsauw" target="_blank" rel="noopener">
+              <div class="we-card__media we-card__media--wide"><img src="https://i.ytimg.com/vi/xbCEWBmsauw/maxresdefault.jpg" alt="How can urban transport work in extreme winter conditions?" loading="lazy"></div>
+              <h3 class="we-card__title">How can urban transport work in extreme winter conditions?</h3>
+              <p class="we-card__category">Documentary Film</p>
+            </a>
+            <a class="we-card" href="https://www.youtube.com/watch?v=w3wHujXd39w" target="_blank" rel="noopener">
+              <div class="we-card__media we-card__media--wide"><img src="https://i.ytimg.com/vi/w3wHujXd39w/maxresdefault.jpg" alt="Can you really bike to work in extreme winter conditions?" loading="lazy"></div>
+              <h3 class="we-card__title">Can you really bike to work in extreme winter conditions?</h3>
+              <p class="we-card__category">Documentary Film</p>
+            </a>
+            <a class="we-card" href="https://www.youtube.com/watch?v=N2ZrvDceEIE" target="_blank" rel="noopener">
+              <div class="we-card__media we-card__media--wide"><img src="https://i.ytimg.com/vi/N2ZrvDceEIE/maxresdefault.jpg" alt="Why do you walk?" loading="lazy"></div>
+              <h3 class="we-card__title">Why do you walk?</h3>
+              <p class="we-card__category">Narrative</p>
+            </a>
+          </div>
+        </section>
+      </article>
+
+      <!-- TERRALINA.CO -->
+      <article class="we-entry">
+        <div class="we-entry__head">
+          <div class="we-entry__logo"><img src="../images/logos/terralina-square.jpg" alt="Terralina"></div>
+          <h2 class="we-entry__company">Terralina.co</h2>
+          <p class="we-entry__role">E-Commerce &amp; Brand Manager</p>
+          <span class="we-entry__years">2023 - 2025</span>
+        </div>
+        <p class="we-entry__desc">Terralina is a US e-commerce brand I built from zero and ran across every channel.</p>
+        <p class="we-entry__desc">I owned the full content lifecycle, from blog articles and website copy to product descriptions and email. I built a content and SEO strategy that generated sales in the first month with zero ad spend, covering keyword research, on-page SEO, schema, internal linking, and Core Web Vitals, tracked through Search Console, Ahrefs, and SEMrush. I built generative AI automation to scale output while keeping quality in hand, and ran the whole Shopify operation. The founder put it simply: I gave you an idea and you gave me back a business.</p>
+        <section class="we-entry__projects">
+          <p class="we-entry__label">Selected projects</p>
+          <div class="we-grid">
+            <a class="we-card">
+              <div class="we-card__media"><video src="../videos/terralina.mp4" autoplay muted loop playsinline></video></div>
+              <h3 class="we-card__title">Terralina</h3>
+              <p class="we-card__category">Brand, e-commerce</p>
+            </a>
+            <a class="we-card">
+              <div class="we-card__media"><img src="../images/terralina-2.jpg" alt="Terralina" loading="lazy"></div>
+              <h3 class="we-card__title">Terralina</h3>
+              <p class="we-card__category">Creative direction</p>
+            </a>
+          </div>
+        </section>
+      </article>
+
+      <!-- NORDICWAYS -->
+      <article class="we-entry">
+        <div class="we-entry__head">
+          <div class="we-entry__logo"><img src="../images/logos/nordicways.jpg" alt="NordicWays"></div>
+          <h2 class="we-entry__company">NordicWays</h2>
+          <p class="we-entry__role">Creative Director</p>
+          <span class="we-entry__years">2022 - 2023</span>
+        </div>
+        <p class="we-entry__desc">NordicWays is a Stockholm travel and experience company.</p>
+        <p class="we-entry__desc">I led creative direction and brand content across every digital channel. I owned the visual identity and brand voice, wrote the website copy, designed the layout, and built the content guidelines and brand standards used by internal teams and outside partners, from brief to delivery.</p>
+        <section class="we-entry__projects">
+          <p class="we-entry__label">Selected projects</p>
+          <div class="we-grid">
+            <a class="we-card">
+              <div class="we-card__media"><img src="../images/nordicways.png" alt="NordicWays website" loading="lazy"></div>
+              <h3 class="we-card__title">NordicWays</h3>
+              <p class="we-card__category">Website</p>
+            </a>
+            <a class="we-card">
+              <div class="we-card__media"><img src="../images/nordicways-2.png" alt="NordicWays brand and content" loading="lazy"></div>
+              <h3 class="we-card__title">NordicWays</h3>
+              <p class="we-card__category">Brand and content</p>
+            </a>
+          </div>
+        </section>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- ==================== CONTACT (same design as homepage) ==================== -->
+  <section class="contact" data-section="contact">
+    <div class="contact__content">
+      <p class="contact__text">I am <strong>Paul Frost.</strong> If you have a story worth telling, a brand worth building, or just really good office snacks, let's talk.</p>
+      <hr class="contact__divider">
+      <p class="contact__email"><strong>Email:</strong> <a href="mailto:paul@roamer.se">paul@roamer.se</a></p>
+      <div class="contact__socials">
+        <a href="https://www.linkedin.com/in/paulfrostt/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="../images/linkedin.svg" alt="LinkedIn" width="16" height="16">
+        </a>
+        <a href="https://www.instagram.com/paulfrostt" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="../images/instagram.svg" alt="Instagram" width="16" height="16">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hamburger toggle (mobile) -->
+  <script>
+    (function () {
+      var hamburger = document.getElementById('hamburger');
+      var nav = document.getElementById('siteNav');
+      if (!hamburger || !nav) return;
+      hamburger.addEventListener('click', function () {
+        hamburger.classList.toggle('is-open');
+        nav.classList.toggle('is-open');
+      });
+    })();
+  </script>
+
+  <!-- Globhe 3D point cloud (Three.js) -->
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+    const canvas = document.getElementById('globheCloud');
+    const loadingEl = document.getElementById('globheLoading');
+    if (canvas) {
+      let started = false;
+      const start = () => {
+        if (started) return;
+        started = true;
+
+        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setClearColor(0x000000, 0);
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(50, 1, 1, 5000);
+
+        const controls = new OrbitControls(camera, canvas);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.08;
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 0.5;
+        controls.enableZoom = false;   // keep page scroll working
+        controls.enablePan = false;
+
+        function resize() {
+          const w = canvas.clientWidth, h = canvas.clientHeight;
+          if (!w || !h) return;
+          if (canvas.width !== Math.round(w * renderer.getPixelRatio()) ||
+              canvas.height !== Math.round(h * renderer.getPixelRatio())) {
+            renderer.setSize(w, h, false);
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+          }
+        }
+
+        fetch('pointcloud.bin')
+          .then(r => r.arrayBuffer())
+          .then(buf => {
+            const view = new DataView(buf);
+            const numPoints = view.getUint32(0, true);
+            const positions = new Float32Array(numPoints * 3);
+            const colors = new Float32Array(numPoints * 3);
+            let offset = 4;
+            for (let i = 0; i < numPoints; i++) {
+              positions[i * 3]     = view.getFloat32(offset, true);
+              positions[i * 3 + 1] = view.getFloat32(offset + 4, true);
+              positions[i * 3 + 2] = view.getFloat32(offset + 8, true);
+              colors[i * 3]     = view.getUint8(offset + 12) / 255;
+              colors[i * 3 + 1] = view.getUint8(offset + 13) / 255;
+              colors[i * 3 + 2] = view.getUint8(offset + 14) / 255;
+              offset += 15;
+            }
+
+            const geo = new THREE.BufferGeometry();
+            geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            geo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+            const mat = new THREE.PointsMaterial({ size: 1.5, vertexColors: true, sizeAttenuation: true });
+            const points = new THREE.Points(geo, mat);
+            points.rotation.x = -Math.PI / 2; // Z-up -> Y-up
+            scene.add(points);
+
+            geo.computeBoundingSphere();
+            const s = geo.boundingSphere;
+            controls.target.copy(s.center).applyMatrix4(points.matrixWorld);
+            camera.position.set(s.center.x, s.center.z + s.radius * 0.4, s.radius * 1.6);
+            controls.update();
+
+            if (loadingEl) loadingEl.style.display = 'none';
+          })
+          .catch(err => {
+            console.error('Point cloud load error:', err);
+            if (loadingEl) loadingEl.textContent = 'Failed to load 3D model';
+          });
+
+        (function animate() {
+          requestAnimationFrame(animate);
+          resize();
+          controls.update();
+          renderer.render(scene, camera);
+        })();
+      };
+
+      // Lazy-load the 6MB cloud only when the card nears the viewport
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          if (entries.some(e => e.isIntersecting)) { start(); io.disconnect(); }
+        }, { rootMargin: '300px' });
+        io.observe(canvas);
+      } else {
+        start();
+      }
+    }
+  </script>
+
+</body>
+</html>
