@@ -222,13 +222,13 @@ body { padding-top: 6rem; }
   white-space: nowrap;
 }
 
-.we-entry__company {
+.we-entry__role {
   margin: 2rem 0 0;
   font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
-.we-entry__role { margin: -0.4rem 0 0; font-size: 0.8rem; font-weight: 500; color: #000000; }
+.we-entry__company { margin: -0.4rem 0 0; font-size: 0.8rem; font-weight: 500; color: #000000; }
 
 .we-entry__desc {
   margin: 1.5rem 0 0;
