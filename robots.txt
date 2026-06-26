@@ -4,6 +4,8 @@ Disallow: /css/
 Disallow: /js/
 Disallow: /apply/
 Disallow: /axis-communications/
+Disallow: /work-experience/
+Disallow: /quadlock-cover-letter.pdf
 
 # AI Crawlers — explicitly allowed
 User-agent: GPTBot
