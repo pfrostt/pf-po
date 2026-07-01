@@ -120,7 +120,8 @@ body {
   transition: transform 0.15s ease-out;
 }
 
-.hero__float video {
+.hero__float video,
+.hero__float img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -143,6 +144,7 @@ body {
 .hero__float--3 { animation: heroFloatIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards, float3 5.8s ease-in-out 1.7s infinite; }
 .hero__float--4 { animation: heroFloatIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards, float4 7s ease-in-out 1.9s infinite; }
 .hero__float--5 { animation: heroFloatIn 1s cubic-bezier(0.16, 1, 0.3, 1) 1.1s forwards, float5 6s ease-in-out 2.1s infinite; }
+.hero__float--6 { animation: heroFloatIn 1s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards, float6 6.8s ease-in-out 2.3s infinite; }
 
 /* Floating keyframes */
 @keyframes float1 { 0%, 100% { translate: 0 0; } 50% { translate: 0 -14px; } }
@@ -150,12 +152,14 @@ body {
 @keyframes float3 { 0%, 100% { translate: 0 0; } 50% { translate: 0 -11px; } }
 @keyframes float4 { 0%, 100% { translate: 0 0; } 50% { translate: 0 -16px; } }
 @keyframes float5 { 0%, 100% { translate: 0 0; } 50% { translate: 0 -13px; } }
+@keyframes float6 { 0%, 100% { translate: 0 0; } 50% { translate: 0 -15px; } }
 
 .hero__float--1 { width: 240px; top: 13%; left: 54%; }
 .hero__float--2 { width: 190px; top: 34%; left: 13%; }
 .hero__float--3 { width: 220px; top: 46%; right: 8%; }
 .hero__float--4 { width: 180px; top: 65%; left: 55%; }
 .hero__float--5 { width: 250px; top: 78%; left: 10%; }
+.hero__float--6 { width: 185px; top: 76%; right: 6%; }
 .hero__float--5 video,
 .hero__float--5[style*="background-image"] {
   object-position: left center;
@@ -330,7 +334,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   width: min(48vw, 820px);
-  margin: 25px auto 0;
+  margin: 60px auto 0;
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s,
@@ -632,7 +636,8 @@ body {
     padding: 100px 24px 60px;
   }
 
-  .hero__float video {
+  .hero__float video,
+  .hero__float img {
     display: none;
   }
 
@@ -646,6 +651,7 @@ body {
   .hero__float--3 { width: 100px; background-image: url('videos/poster-3.jpg'); top: 48%; right: 3%; left: auto; opacity: 0.35; }
   .hero__float--4 { width: 80px; background-image: url('videos/poster-4.jpg'); top: 68%; left: 50%; opacity: 0.35; }
   .hero__float--5 { width: 115px; background-image: url('videos/poster-5.jpg'); top: 82%; left: 3%; opacity: 0.35; }
+  .hero__float--6 { width: 95px; background-image: url('videos/poster-6.jpg'); top: 70%; right: 4%; left: auto; opacity: 0.35; }
 
   .hero__title {
     font-size: 3.2rem;
